@@ -1,0 +1,121 @@
+@import "./base.scss";
+@import "../component/header.scss";
+@import "../component/footer.scss";
+@import "../component/search.scss";
+.center {
+	@include height(1016, 1292);
+	position: relative;
+}
+.search{
+	@include height(62, 1016);
+	@include border(top, 1px, white);
+	background: #f68e54;
+}
+.map{
+	@include height(1016 - 62, 1016);
+}
+
+.activity{
+	@include height(400, 1016);
+	@include absolute(top, 136, 1016);
+	width: 100%;
+	background: #f68e54;
+}
+ul{
+	height: 100%;
+}
+.search-link{
+	display: block;
+	height: 50%;
+}
+.select-container{
+	width: 65%;
+	font-size: 12px;
+	color: white;
+	display: inline-block;
+}
+.tag-select{
+	@include width(1, 5);
+	text-align: center;
+}
+.search-group{
+	@include height(1, 4);
+	@include border(top, 1px, #ffad6a);
+	text-align: center;
+}
+.search-group:first-child{
+	border:none;
+}
+.input-group{
+	width: 65%;
+	border-radius: 4px;
+	height: 50%;
+	border: none;
+}
+.before-group{
+	height: 50%;
+	display: block;
+	margin-left: 20px;
+	color: white;
+}
+
+.join-activity{
+	@include height(725, 955);
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	z-index: 400;
+}
+
+.join-top{
+	@include height(450, 725);
+	background-image: url("../assets/lake.png");
+	background-size: 100% 100%;
+}
+.join-bottom{
+	@include height(725 - 450, 725);
+	background-color: #22252b;
+	padding: 10px;
+	box-sizing: border-box;
+	position: relative;
+	color: white;
+}
+.join-panel{
+	@include width(425, 750);
+	@include height(1, 2);
+	@include relative(top, 1, 2);
+	margin: 0 auto;
+	color: white;
+}
+.btn{
+	width: 50%;
+	padding: 5px 0;
+	background-color: #3f4550;
+	display: inline-block;
+	position: absolute;
+	bottom: 0px;
+	margin-left: 25%;
+	margin-bottom: 10px;
+	border-radius: 4px;
+	text-align: center;
+}
+.btn img{
+	width: 12%;
+	vertical-align: middle;
+}
+
+.before-circle{
+	width: 40px;
+	height: 40px;
+	background-color: red;
+	position: absolute;
+	margin-left: -50px;
+}
+.after-circle{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	right: 0;
+	margin-top: -55px;
+	margin-right: 8%;
+}

@@ -1,0 +1,30 @@
+@mixin width($inWidth, $outWidth){
+	$width: $inWidth / $outWidth * 100 + %;
+	width: $width;
+}
+@mixin height($inHeight, $outHeight){
+	$height: $inHeight / $outHeight * 100 + %;
+	height: $height;
+}
+@mixin margin($direction, $inWidth, $outWidth){
+	$width: $inWidth / $outWidth * 100 + %;
+	margin-#{$direction}: $width;
+}
+@mixin relative($direction, $in, $out){
+	position: relative;
+	$scale: $in / $out * 100 + %;
+	#{$direction}: $scale;
+}
+@mixin absolute($direction, $in, $out){
+	position: absolute;
+	$scale: $in / $out * 100 + %;
+	#{$direction}: $scale;
+}
+@mixin border($direction, $lineWidth, $color){
+	box-sizing: border-box;
+	border-#{$direction}: $lineWidth solid $color;
+}
+%lineHeight{
+	vertical-align: middle;
+	display: inline-block;
+}

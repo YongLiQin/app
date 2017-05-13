@@ -1,0 +1,11 @@
+import "../sass/map.scss";
+import tplHeader from "../component/header.html";
+import tplFooter from "../component/footer.html";
+import tplSearch from "../component/search.html";
+import {$, $$} from "./query";
+var header = $("#header");
+var footer = $("#footer");
+var search = $("#search");
+header.innerHTML = tplHeader;
+footer.innerHTML = tplFooter;
+search.innerHTML = tplSearch;

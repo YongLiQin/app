@@ -1,0 +1,90 @@
+@import "../component/header.scss";
+@import "./base.scss";
+
+.center {
+	@include height(1292 - 110 - 86, 1292);
+	position: relative;
+	background-color: #f5ba99;
+}
+
+.footer{
+	@include height(110, 1292);
+	background-color: #131518;
+}
+
+.chat-content{
+	@include margin(left, (750 - 686) / 2, 750);
+	@include margin(right, (750 - 686) / 2, 750);
+	box-sizing: border-box;
+	height: 100%;
+	overflow-y: auto;
+}
+
+.chat-group, .time{
+	margin-top: 20px;
+}
+
+.time{
+	text-align: center;
+	color: white;
+}
+
+.circle-right{
+	@include width(96, 686);
+	@include margin(left, 20, 686);
+	height: 20px;
+}
+
+.circle-left{
+	height: 20px;
+	@include width(96, 686);
+	@include margin(right, 20, 686);
+}
+
+.chat-control{
+	@include width(686 - 96 - 20 - 96, 686);
+	word-break: break-all;
+	padding: 10px 5px;
+	box-sizing: border-box;
+	background: white;
+	border-radius: 10px;
+}
+
+.footer-in{
+	@include width(686, 750);
+	@include height(75, 110);
+	@include relative(top, 35 / 2, 110);
+	margin: 0 auto;
+}
+
+.methods, .send, .msg{
+	height: 100%;
+	float: left;
+}
+
+.methods, .send{
+	@include width(70, 686);
+}
+.msg{
+	@include width(686 - 140, 686);
+	text-align: center;
+	> input{
+		height: 100%;
+		@include width(475, 686 - 140);
+		border: none;
+		background-color: #131518;
+		text-indent: 1em;
+	}
+}
+.send-photo{
+	position: absolute;
+	margin-top: -18%;
+}
+.methods{
+	> input{
+		@extend .send-photo;
+		width: 60px;
+		height: 35px;
+		opacity: 0;
+	}
+}

@@ -1,0 +1,54 @@
+@import "../component/header.scss";
+@import "../component/footer.scss";
+@import "../component/navbar.scss";
+@import "./base.scss";
+
+.center {
+	@include height(1016, 1292)
+}
+
+.nav-bar{
+	@include height(51, 1016);
+	background: #f68e54;
+}
+.content{
+	@include height(1016 - 51, 1016);
+	background-color: #f5ba99;
+	overflow: auto;
+}
+.nearby-group{
+	@include width(572, 750);
+	@include height(124, 1016 - 51);
+	@include margin(top, 30, 1016 - 51);
+	@include margin(left, 72, 1016 - 51);
+}
+.nearby-top{
+	@include height(95, 124);
+	position: relative;
+}
+.nearby-right{
+	margin-left: 15px;
+	height: 100%;
+	> h3{
+		height: 50%;
+	}
+	> p{
+		height: 50%;
+	}
+}
+.geolocation{
+	width: 50px;
+	height: 16px;
+	position: absolute;
+	margin-right: -50px;
+	right: 0px;
+}
+.nearby-bottom{
+	@include height(124 - 95, 124);
+	>img{
+		margin-right: 5px;
+	}
+	>img:first-child{
+		margin-left: 25%;
+	}
+}

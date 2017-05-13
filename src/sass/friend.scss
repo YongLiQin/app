@@ -1,0 +1,44 @@
+@import "../component/header.scss";
+@import "../component/footer.scss";
+@import "../component/navbar.scss";
+@import "./base.scss";
+.center {
+	@include height(1016, 1292)
+}
+.nav-bar{
+	@include height(51, 1016);
+	background: #f68e54;
+}
+.content{
+	@include height(1016 - 51, 1016);
+	background-color: #f5ba99;
+	overflow: auto;
+}
+.friend-group{
+	@include height(1, 6);
+	background-color: green;
+}
+.friend-group{
+	@include border(top, 1px, white);
+}
+.friend-group:first-child{
+	border: none;
+}
+.friend-group-in{
+	@include height(94, 185);
+	@include relative(top, (185 - 94) / 2, 185);
+	width: 90%;
+	margin: 0 auto;
+}
+.friend-msg{
+	margin-left: 20px;
+	height: 100%;
+}
+.send-msg{
+	height: 100%;
+}
+.btn{
+	background: #d2d2d2;
+	padding: 6px 8px;
+	border-radius: 4px;
+}

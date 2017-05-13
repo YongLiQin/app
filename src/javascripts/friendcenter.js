@@ -1,0 +1,17 @@
+import "../sass/friendcenter.scss";
+import tplHeader from "../component/header.html";
+import tplFooter from "../component/footer.html";
+import tplSearch from "../component/search.html";
+import {$, $$} from "./query";
+import {toCircle, toCircleEvery} from "./circle";
+import {circleWidth, circleHeight} from "./circle";
+import lineHeight from "./lineheight";
+var header = $("#header");
+var footer = $("#footer");
+var search = $("#search");
+header.innerHTML = tplHeader;
+footer.innerHTML = tplFooter;
+search.innerHTML = tplSearch;
+circleWidth($$(".circle"), $("#circle-wrap"));
+lineHeight($$(".average-group"), $(".average-group"));
+lineHeight($$(".msg-group"), $(".msg-group"));

@@ -1,0 +1,8 @@
+@import "../sass/mixin.scss";
+.nav-group{
+	width: 33.33%;
+	float: left;
+	height: 80%;
+	text-align: center;
+	@include relative(top, 1, 10);
+}

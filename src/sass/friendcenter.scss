@@ -1,0 +1,89 @@
+@import "./base.scss";
+@import "../component/header.scss";
+@import "../component/footer.scss";
+@import "../component/search.scss";
+.center {
+	@include height(1016, 1292);
+	position: relative;
+}
+.search{
+	@include height(62, 1016);
+	@include border(top, 1px, white);
+	background: #f68e54;
+}
+.person-img{
+	@include height(320, 1016);
+	background-image: url("../assets/friendbackground.png");
+	background-size: 100% 100%;
+}
+.person-img-in{
+	@include height(220, 320);
+	@include width(140, 750);
+	@include relative(top, 50, 320);
+	margin: 0 auto;
+}
+.concern{
+	border: 2px solid #039ed5;
+	text-align: center;
+	padding: 1px 0;
+	border-radius: 25px;
+	margin-top: 8px;
+	color: #039ed5;
+}
+.person-statement{
+	@include height(118, 1016);
+	background: #e5e5e5;
+	> div{
+		text-align: center;
+		height: 50%;
+	}
+	> div:first-child{
+		color: #757272;
+	}
+	> div:last-child{
+		font-size: 16px;
+	}
+}
+.person-detail{
+	@include height(1016 - 62 - 320 -118, 1016);
+}
+.person-in{
+	@include margin(left, 140, 750);
+	@include margin(right, 40, 750);
+	height: 100%;
+	li{
+		padding: 0 5px;
+		@include border(top, 1px, #e5e5e5);
+		box-sizing: border-box;
+		@include height(1, 6);
+		font-size: 13px;
+		overflow: hidden;
+	}
+	li:first-child{
+		border: none;
+	}
+}
+ul{
+	height: 100%;
+}
+.person-detail-img{
+	position: absolute;
+	height: 35px;
+	width: 35px;
+	border-radius: 50%;
+	background-color: red;
+	margin-left: -45px;
+}
+
+.average-group{
+	@include width(1, 2);
+	height: 100%;
+	float: left;
+}
+
+.control-bottom{
+	height: 60%;
+	> .average-group{
+		text-align: center;
+	}
+}

@@ -1,0 +1,55 @@
+@import "../component/header.scss";
+@import "../component/footer.scss";
+@import "../component/navbar.scss";
+@import "./base.scss";
+
+.center {
+	@include height(1016, 1292)
+}
+
+.nav-bar{
+	@include height(51, 1016);
+	background: #f68e54;
+}
+.content{
+	@include height(1016 - 51, 1016);
+	background-color: #f5ba99;
+	overflow: auto;
+}
+
+.activity-group{
+	@include width(560, 750);
+	@include height(272, 1014 - 53);
+	margin: 0 auto;
+}
+
+.activity-group-in{
+	@include height((272 - 40 * 2), 272);
+	@include relative(top, 40, 272);
+}
+
+.activity-img{
+	@include width(178, 560);
+	height: 100%;
+	background-color: red;
+	float: left;
+}
+.activity-detail{
+	@include width(560 - 178, 560);
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	padding-left: 6px;
+	box-sizing: border-box;
+	> div{
+		margin-top: 1px;
+		font-size: 12px;
+	}
+}
+.btn-enter{
+	background-color: #7db343;
+	padding: 8px 14px;
+	border-radius: 4px;
+	font-size: 14px;
+	color: white;
+}

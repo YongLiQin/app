@@ -1,0 +1,23 @@
+@import "../sass/mixin.scss";
+.footer{
+	@include height(1292 - 86 - 1016, 1292);
+	background: #f68e54;
+}
+.add-wrap{
+	@include height(94, 191);
+	@include border(bottom, 1px, white);
+}
+.add-container{
+	@include height(9, 10);
+	@include relative(top, 0.5, 10);
+	text-align: center;
+}
+.menu-wrap{
+	@include height(191 - 94, 191);
+}
+.menu-container{
+	display: block;
+	width: 33.3333%;
+	text-align: center;
+	@extend .add-container;
+}

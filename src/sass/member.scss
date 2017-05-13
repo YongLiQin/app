@@ -1,0 +1,62 @@
+@import "./base.scss";
+@import "../component/header.scss";
+
+.center {
+	@include height(1292 - 115 - 86, 1292);
+	background-color: #ff987e;
+	overflow: auto;
+}
+.center-in{
+	height: 100%;
+	@include margin(left, 32, 750);
+	@include margin(right, 32, 750);
+	> div:nth-child(3){
+		margin-top: 15px;
+	}
+}
+.director{
+	@include height(72, 1292 - 115 - 86);
+	@include border(bottom, 1px, white);
+	color: white;
+	text-align: center;
+}
+.quarter{
+	margin-top: 15px;
+	float: left;
+	width: 22%;
+	@include margin(left, 0.12, 3);
+}
+
+.average-3{
+	margin-top: 15px;
+	width: 22%;
+	float: left;
+	@include margin(left, 0.34, 2);
+	> .decription{
+		margin-top: 10px;
+		color: white;
+		> h3{
+			text-align: center;
+		}
+		> p{
+			text-align: center;
+		}
+	}
+}
+
+.footer{
+	@include height(115, 1292);
+	background: #f68e54;
+}
+
+.menu-group{
+	height: 60%;
+	box-sizing: border-box;
+	@include relative(top, 2, 10);
+}
+.menu-control{
+	width: 33.3333%;
+	float: left;
+	text-align: center;
+	height: 100%;
+}

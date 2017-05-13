@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>friend</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<meta name="apple-touch-fullscreen" content="YES" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+</head>
+<body>
+	<div class="container">
+		<div id="header" class="header">
+			
+		</div>
+		<div class="center">
+			<div id="search" class="search">
+				
+			</div>
+			<div id="map" class="map"></div>
+			<div style="display: none;" class="activity">
+				<ul>
+					<li class="search-group">
+						<a class="search-link" href="">
+							<img class="choose" src="assets/choose-29a53.png" alt="">
+						</a>
+					</li>
+					<li class="search-group">
+						<span class="pull-left before-group">
+							标签:
+						</span>
+						<ul class="select-container">
+							<li class="pull-left tag-select">体育</li>
+							<li class="pull-left tag-select">狼人杀</li>
+							<li class="pull-left tag-select">聊天</li>
+							<li class="pull-left tag-select">旅行</li>
+							<li class="pull-left tag-select">下午茶</li>
+						</ul>
+					</li>
+					<li class="search-group">
+						<span class="pull-left before-group">地点:</span>
+						<input class="input-group" type="text">
+					</li>
+					<li class="search-group">
+						<span class="pull-left before-group">时间:</span>
+						<input class="input-group" type="date">
+					</li>
+				</ul>
+			</div>
+			<div class="join-activity">
+				<div class="join-top">
+					<div class="join-panel">
+						<div class="circle before-circle">
+							
+						</div>
+						<h3>西游一日游</h3>
+						<ul>
+							<li>dd</li>
+							<li>cc</li>
+							<li>ee</li>
+							<li>vv</li>
+						</ul>
+						
+					</div>
+				</div>
+				<div class="after-circle">
+					<img src="assets/person-dbcdd.png" alt="">	
+				</div>
+				<div class="join-bottom">
+					<p>555111114</p>
+					<a class="btn" href="">
+						<img src="assets/join_activity-b582d.png" alt="">我要报名
+					</a>
+				</div>
+			</div>
+		</div>
+		<div id="footer" class="footer">
+			
+		</div>
+	</div>
+	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=1aa77e3ad7abe08ec4b72e28a5a80234&plugin=AMap.ToolBar"></script>
+	<script>
+		var map = new AMap.Map("map");
+		map.setZoom(18);
+	</script>
+<script type="text/javascript" src="js/map.js"></script></body>
+</html>

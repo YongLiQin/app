@@ -1,0 +1,90 @@
+@import "./base.scss";
+@import "./mixin.scss";
+.header {
+	@include height(86, 1292);
+}
+.empty {
+	@include height(150, 1292);
+	background: #f68e54;
+}
+.center {
+	@include height(1292 - 86 - 300, 1292);
+}
+
+.header-in{
+	@include height(35, 86);
+	@include relative(top, (86 - 35) / 2, 86);
+
+}
+
+.back{
+	height: 100%;
+	position: absolute;
+	margin-left: 10px;
+}
+
+.app-name{
+	text-align: center;
+}
+
+form{
+	height: 100%;
+}
+
+.top-container{
+	@include height(460, 1130);
+}
+
+.bottom-container{
+	@include height((1130 - 460) / 2, 1130);
+}
+
+.input-group{
+	@include height(1, 4);
+	@include border(top, 1px, #e5e5e5);
+	@include border(bottom, 1px, #e5e5e5);
+	box-sizing: border-box;
+}
+.before-group{
+	@include width(150, 750);
+	float: left;
+	height: 100%;
+	color: #757575;
+	font-size: 14px;
+}
+.after-group{
+	@include width(750 - 150, 750);
+	height: 100%;
+	float: left;
+}
+.input-control{
+	height: 100%;
+	border: none;
+	width: 100%;
+	font-size: 12px;
+	text-indent: 1em;
+}
+.activity-group{
+	@include height(65, (1130 - 460) / 2);
+	background-color: #e5e5e5;
+}
+.activity-content{
+	@include height((1130 - 460) / 2 - 65, (1130 - 460) / 2);
+}
+textarea{
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+.btn-container{
+	@include border(top, 4px, #e5e5e5);
+	text-align: center;
+}
+.btn{
+	border: none;
+	border-radius: 5px;
+	padding: 6px 40px;
+	margin-top: 20px;
+	color: #00B7FF;
+	font-size: 20px;
+}
