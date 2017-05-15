@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 38);
+/******/ 	return __webpack_require__(__webpack_require__.s = 41);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -77,49 +77,19 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-var $ = function $(query) {
-	return document.querySelector(query);
-};
-var $$ = function $$(query) {
+
+exports.default = function (query) {
 	return document.querySelectorAll(query);
 };
-exports.$ = $;
-exports.$$ = $$;
+
+;
 
 /***/ }),
 
 /***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<div class=\"header-in\">\r\n\t<a id=\"back\" class=\"back\" href=\"javascript:;\">\r\n\t\t<img src=\"" + __webpack_require__(7) + "\">\r\n\t</a>\r\n\t<p class=\"app-name\">社交缘</p>\r\n</div>\r\n";
-
-/***/ }),
-
-/***/ 12:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-var circleWidth = function circleWidth(dom1, dom2) {
-	var size = dom2.offsetWidth;
-	for (var i = 0; i < dom1.length; i++) {
-		dom1[i].style.height = size + "px";
-		dom1[i].style.width = size + "px";
-	}
-};
-var circleHeight = function circleHeight(dom1, dom2) {
-	var size = dom2.offsetHeight;
-	for (var i = 0; i < dom1.length; i++) {
-		dom1[i].style.height = size + "px";
-		dom1[i].style.width = size + "px";
-	}
-};
-exports.circleWidth = circleWidth;
-exports.circleHeight = circleHeight;
+module.exports = "<div class=\"header-in\">\r\n\t<a id=\"back\" class=\"back\" href=\"javascript:;\">\r\n\t\t<img src=\"" + __webpack_require__(6) + "\">\r\n\t</a>\r\n\t<p class=\"app-name\">社交缘</p>\r\n</div>\r\n";
 
 /***/ }),
 
@@ -206,13 +176,13 @@ function toComment(sourceMap) {
 
 /***/ }),
 
-/***/ 27:
+/***/ 29:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(49);
+var content = __webpack_require__(51);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(3)(content, {});
@@ -530,47 +500,6 @@ function updateLink(linkElement, options, obj) {
 
 /***/ }),
 
-/***/ 38:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(27);
-
-var _header = __webpack_require__(1);
-
-var _header2 = _interopRequireDefault(_header);
-
-var _query = __webpack_require__(0);
-
-var _lineheight = __webpack_require__(5);
-
-var _lineheight2 = _interopRequireDefault(_lineheight);
-
-var _circle = __webpack_require__(12);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var header = (0, _query.$)("#header");
-header.innerHTML = _header2.default;
-(0, _lineheight2.default)((0, _query.$$)(".director"), (0, _query.$)(".director"));
-(0, _circle.circleWidth)((0, _query.$$)(".quarter"), (0, _query.$)(".quarter"));
-(0, _circle.circleWidth)((0, _query.$$)(".top-circle"), (0, _query.$)(".top-circle"));
-var margin = function margin(dom, target) {
-	var size = 1;
-	for (var i = 1; i <= dom.length; i++) {
-		if (i % size == 0 && dom[i - 1]) {
-			size += target;
-			dom[i - 1].style.marginLeft = '0';
-		}
-	}
-};
-margin((0, _query.$$)(".quarter"), 4);
-margin((0, _query.$$)(".average-3"), 3);
-
-/***/ }),
-
 /***/ 4:
 /***/ (function(module, exports) {
 
@@ -667,18 +596,46 @@ module.exports = function (css) {
 
 /***/ }),
 
-/***/ 49:
+/***/ 41:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(undefined);
-// imports
+"use strict";
 
 
-// module
-exports.push([module.i, "* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.header {\n  height: 6.65635%; }\n\n.header-in {\n  height: 40.69767%;\n  position: relative;\n  top: 29.65116%; }\n\n.back {\n  height: 100%;\n  position: absolute;\n  margin-left: 10px; }\n\n.app-name {\n  text-align: center; }\n\n.center {\n  height: 84.44272%;\n  background-color: #ff987e;\n  overflow: auto; }\n\n.center-in {\n  height: 100%;\n  margin-left: 4.26667%;\n  margin-right: 4.26667%; }\n  .center-in > div:nth-child(3) {\n    margin-top: 15px; }\n\n.director {\n  height: 6.59945%;\n  box-sizing: border-box;\n  border-bottom: 1px solid white;\n  color: white;\n  text-align: center; }\n\n.quarter {\n  margin-top: 15px;\n  float: left;\n  width: 22%;\n  margin-left: 4%; }\n\n.average-3 {\n  margin-top: 15px;\n  width: 22%;\n  float: left;\n  margin-left: 17%; }\n  .average-3 > .decription {\n    margin-top: 10px;\n    color: white; }\n    .average-3 > .decription > h3 {\n      text-align: center; }\n    .average-3 > .decription > p {\n      text-align: center; }\n\n.footer {\n  height: 8.90093%;\n  background: #f68e54; }\n\n.menu-group {\n  height: 60%;\n  box-sizing: border-box;\n  position: relative;\n  top: 20%; }\n\n.menu-control {\n  width: 33.3333%;\n  float: left;\n  text-align: center;\n  height: 100%; }\n", ""]);
+__webpack_require__(29);
 
-// exports
+var _header = __webpack_require__(1);
 
+var _header2 = _interopRequireDefault(_header);
+
+var _query = __webpack_require__(0);
+
+var _query2 = _interopRequireDefault(_query);
+
+var _lineheight = __webpack_require__(5);
+
+var _lineheight2 = _interopRequireDefault(_lineheight);
+
+var _circle = __webpack_require__(8);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var header = (0, _query2.default)("#header")[0];
+header.innerHTML = _header2.default;
+(0, _lineheight2.default)((0, _query2.default)(".director"), (0, _query2.default)(".director")[0]);
+(0, _circle.circleWidth)((0, _query2.default)(".quarter"), (0, _query2.default)(".quarter")[0]);
+(0, _circle.circleWidth)((0, _query2.default)(".top-circle"), (0, _query2.default)(".top-circle")[0]);
+var margin = function margin(dom, target) {
+	var size = 1;
+	for (var i = 1; i <= dom.length; i++) {
+		if (i % size == 0 && dom[i - 1]) {
+			size += target;
+			dom[i - 1].style.marginLeft = '0';
+		}
+	}
+};
+margin((0, _query2.default)(".quarter"), 4);
+margin((0, _query2.default)(".average-3"), 3);
 
 /***/ }),
 
@@ -701,10 +658,53 @@ exports.default = lineHeight;
 
 /***/ }),
 
-/***/ 7:
+/***/ 51:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  max-width: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.header {\n  height: 6.65635%; }\n\n.header-in {\n  height: 40.69767%;\n  position: relative;\n  top: 29.65116%; }\n\n.back {\n  height: 100%;\n  position: absolute;\n  margin-left: 10px; }\n\n.app-name {\n  text-align: center; }\n\n.center {\n  height: 84.44272%;\n  background-color: #ff987e;\n  overflow: auto; }\n\n.center-in {\n  height: 100%;\n  margin-left: 4.26667%;\n  margin-right: 4.26667%; }\n  .center-in > div:nth-child(3) {\n    margin-top: 15px; }\n\n.director {\n  height: 6.59945%;\n  box-sizing: border-box;\n  border-bottom: 1px solid white;\n  color: white;\n  text-align: center; }\n\n.quarter {\n  margin-top: 15px;\n  float: left;\n  width: 22%;\n  margin-left: 4%; }\n\n.average-3 {\n  margin-top: 15px;\n  width: 22%;\n  float: left;\n  margin-left: 17%; }\n  .average-3 > .decription {\n    margin-top: 10px;\n    color: white; }\n    .average-3 > .decription > h3 {\n      text-align: center; }\n    .average-3 > .decription > p {\n      text-align: center; }\n\n.footer {\n  height: 8.90093%;\n  background: #f68e54; }\n\n.menu-group {\n  height: 60%;\n  box-sizing: border-box;\n  position: relative;\n  top: 20%; }\n\n.menu-control {\n  width: 33.3333%;\n  float: left;\n  text-align: center;\n  height: 100%; }\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/arrow-22d44.png";
+
+/***/ }),
+
+/***/ 8:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+var circleWidth = function circleWidth(dom1, dom2) {
+	var size = dom2.offsetWidth;
+	for (var i = 0; i < dom1.length; i++) {
+		dom1[i].style.height = size + "px";
+		dom1[i].style.width = size + "px";
+	}
+};
+var circleHeight = function circleHeight(dom1, dom2) {
+	var size = dom2.offsetHeight;
+	for (var i = 0; i < dom1.length; i++) {
+		dom1[i].style.height = size + "px";
+		dom1[i].style.width = size + "px";
+	}
+};
+exports.circleWidth = circleWidth;
+exports.circleHeight = circleHeight;
 
 /***/ })
 

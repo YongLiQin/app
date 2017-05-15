@@ -1,4 +1,4 @@
 import "../sass/register.scss";
-import {$, $$} from "./query";
+import $ from "./query";
 import lineHeight from "./lineheight";
-lineHeight($$(".before-group"), $(".before-group"));
+lineHeight($(".before-group"), $(".before-group")[0]);

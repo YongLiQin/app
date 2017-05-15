@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 35);
+/******/ 	return __webpack_require__(__webpack_require__.s = 38);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -76,20 +76,18 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-var $ = function $(query) {
-	return document.querySelector(query);
-};
-var $$ = function $$(query) {
+
+exports.default = function (query) {
 	return document.querySelectorAll(query);
 };
-exports.$ = $;
-exports.$$ = $$;
+
+;
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<div class=\"header-in\">\r\n\t<a id=\"back\" class=\"back\" href=\"javascript:;\">\r\n\t\t<img src=\"" + __webpack_require__(7) + "\">\r\n\t</a>\r\n\t<p class=\"app-name\">社交缘</p>\r\n</div>\r\n";
+module.exports = "<div class=\"header-in\">\r\n\t<a id=\"back\" class=\"back\" href=\"javascript:;\">\r\n\t\t<img src=\"" + __webpack_require__(6) + "\">\r\n\t</a>\r\n\t<p class=\"app-name\">社交缘</p>\r\n</div>\r\n";
 
 /***/ }),
 /* 2 */
@@ -569,40 +567,40 @@ module.exports = function (css) {
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<div class=\"add-wrap\">\r\n\t<div class=\"add-container\">\r\n\t\t<img src='" + __webpack_require__(8) + "'>\r\n\t</div>\r\n</div>\r\n<div class=\"menu-wrap\">\r\n\t<a class=\"menu-container pull-left\">\r\n\t\t<img src='" + __webpack_require__(10) + "'>\r\n\t</a>\r\n\t<a class=\"menu-container pull-left\">\r\n\t\t<img src='" + __webpack_require__(11) + "'>\r\n\t</a>\r\n\t<a class=\"menu-container pull-left\">\r\n\t\t<img src='" + __webpack_require__(9) + "'>\r\n\t</a>\r\n</div>";
+module.exports = __webpack_require__.p + "assets/arrow-22d44.png";
 
 /***/ }),
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/arrow-22d44.png";
+module.exports = "<div class=\"add-wrap\">\r\n\t<div class=\"add-container\">\r\n\t\t<img src='" + __webpack_require__(9) + "'>\r\n\t</div>\r\n</div>\r\n<div class=\"menu-wrap\">\r\n\t<a class=\"menu-container pull-left\">\r\n\t\t<img src='" + __webpack_require__(11) + "'>\r\n\t</a>\r\n\t<a class=\"menu-container pull-left\">\r\n\t\t<img src='" + __webpack_require__(12) + "'>\r\n\t</a>\r\n\t<a class=\"menu-container pull-left\">\r\n\t\t<img src='" + __webpack_require__(10) + "'>\r\n\t</a>\r\n</div>";
 
 /***/ }),
-/* 8 */
+/* 8 */,
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/iconfont-c1b19.png";
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/man-f05b5.png";
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/map-fadb5.png";
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/news-baff5.png";
 
 /***/ }),
-/* 12 */,
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -634,13 +632,15 @@ module.exports = __webpack_require__.p + "assets/smallman-7947f.png";
 /* 21 */,
 /* 22 */,
 /* 23 */,
-/* 24 */
+/* 24 */,
+/* 25 */,
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(46);
+var content = __webpack_require__(48);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(3)(content, {});
@@ -660,8 +660,6 @@ if(false) {
 }
 
 /***/ }),
-/* 25 */,
-/* 26 */,
 /* 27 */,
 /* 28 */,
 /* 29 */,
@@ -670,19 +668,22 @@ if(false) {
 /* 32 */,
 /* 33 */,
 /* 34 */,
-/* 35 */
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(24);
+__webpack_require__(26);
 
 var _header = __webpack_require__(1);
 
 var _header2 = _interopRequireDefault(_header);
 
-var _footer = __webpack_require__(6);
+var _footer = __webpack_require__(7);
 
 var _footer2 = _interopRequireDefault(_footer);
 
@@ -692,19 +693,18 @@ var _navbar2 = _interopRequireDefault(_navbar);
 
 var _query = __webpack_require__(0);
 
+var _query2 = _interopRequireDefault(_query);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var header = (0, _query.$)("#header");
-var footer = (0, _query.$)("#footer");
-var navBar = (0, _query.$)("#navBar");
+var header = (0, _query2.default)("#header")[0];
+var footer = (0, _query2.default)("#footer")[0];
+var navBar = (0, _query2.default)("#navBar")[0];
 header.innerHTML = _header2.default;
 footer.innerHTML = _footer2.default;
 navBar.innerHTML = _navbar2.default;
 
 /***/ }),
-/* 36 */,
-/* 37 */,
-/* 38 */,
 /* 39 */,
 /* 40 */,
 /* 41 */,
@@ -712,7 +712,9 @@ navBar.innerHTML = _navbar2.default;
 /* 43 */,
 /* 44 */,
 /* 45 */,
-/* 46 */
+/* 46 */,
+/* 47 */,
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -720,7 +722,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, ".header {\n  height: 6.65635%; }\n\n.header-in {\n  height: 40.69767%;\n  position: relative;\n  top: 29.65116%; }\n\n.back {\n  height: 100%;\n  position: absolute;\n  margin-left: 10px; }\n\n.app-name {\n  text-align: center; }\n\n.footer {\n  height: 14.70588%;\n  background: #f68e54; }\n\n.add-wrap {\n  height: 49.21466%;\n  box-sizing: border-box;\n  border-bottom: 1px solid white; }\n\n.add-container, .menu-container {\n  height: 90%;\n  position: relative;\n  top: 5%;\n  text-align: center; }\n\n.menu-wrap {\n  height: 50.78534%; }\n\n.menu-container {\n  display: block;\n  width: 33.3333%;\n  text-align: center; }\n\n.nav-group {\n  width: 33.33%;\n  float: left;\n  height: 80%;\n  text-align: center;\n  position: relative;\n  top: 10%; }\n\n* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.center {\n  height: 78.63777%; }\n\n.nav-bar {\n  height: 5.01969%;\n  background: #f68e54; }\n\n.content {\n  height: 94.98031%;\n  background-color: #f5ba99;\n  overflow: auto; }\n\n.activity-group {\n  width: 74.66667%;\n  height: 28.30385%;\n  margin: 0 auto; }\n\n.activity-group-in {\n  height: 70.58824%;\n  position: relative;\n  top: 14.70588%; }\n\n.activity-img {\n  width: 31.78571%;\n  height: 100%;\n  background-color: red;\n  float: left; }\n\n.activity-detail {\n  width: 68.21429%;\n  height: 100%;\n  float: left;\n  overflow: hidden;\n  padding-left: 6px;\n  box-sizing: border-box; }\n  .activity-detail > div {\n    margin-top: 1px;\n    font-size: 12px; }\n\n.btn-enter {\n  background-color: #7db343;\n  padding: 8px 14px;\n  border-radius: 4px;\n  font-size: 14px;\n  color: white; }\n", ""]);
+exports.push([module.i, ".header {\n  height: 6.65635%; }\n\n.header-in {\n  height: 40.69767%;\n  position: relative;\n  top: 29.65116%; }\n\n.back {\n  height: 100%;\n  position: absolute;\n  margin-left: 10px; }\n\n.app-name {\n  text-align: center; }\n\n.footer {\n  height: 14.70588%;\n  background: #f68e54; }\n\n.add-wrap {\n  height: 49.21466%;\n  box-sizing: border-box;\n  border-bottom: 1px solid white; }\n\n.add-container, .menu-container {\n  height: 90%;\n  position: relative;\n  top: 5%;\n  text-align: center; }\n\n.menu-wrap {\n  height: 50.78534%; }\n\n.menu-container {\n  display: block;\n  width: 33.3333%;\n  text-align: center; }\n\n.nav-group {\n  width: 33.33%;\n  float: left;\n  height: 80%;\n  text-align: center;\n  position: relative;\n  top: 10%; }\n\n* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  max-width: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.center {\n  height: 78.63777%; }\n\n.nav-bar {\n  height: 5.01969%;\n  background: #f68e54; }\n\n.content {\n  height: 94.98031%;\n  background-color: #f5ba99;\n  overflow: auto; }\n\n.activity-group {\n  width: 74.66667%;\n  height: 28.30385%;\n  margin: 0 auto; }\n\n.activity-group-in {\n  height: 70.58824%;\n  position: relative;\n  top: 14.70588%; }\n\n.activity-img {\n  width: 31.78571%;\n  height: 100%;\n  background-color: red;\n  float: left; }\n\n.activity-detail {\n  width: 68.21429%;\n  height: 100%;\n  float: left;\n  overflow: hidden;\n  padding-left: 6px;\n  box-sizing: border-box; }\n  .activity-detail > div {\n    margin-top: 1px;\n    font-size: 12px; }\n\n.btn-enter {\n  background-color: #7db343;\n  padding: 8px 14px;\n  border-radius: 4px;\n  font-size: 14px;\n  color: white; }\n", ""]);
 
 // exports
 

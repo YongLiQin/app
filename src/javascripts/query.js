@@ -1,7 +1,3 @@
-var $ = (query) => {
-	return document.querySelector(query);
-};
-var $$ = (query) => {
+export default (query) => {
 	return document.querySelectorAll(query);
-};
-export {$, $$};
+};;

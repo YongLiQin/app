@@ -29,7 +29,7 @@
 							活动类型
 						</div>
 						<div class="after-group">
-							<input required class="input-control" placeholder="请选择类型" type="text">
+							<input name="eventType" required class="input-control" placeholder="请选择类型" type="text">
 						</div>
 					</div>
 					<div class="input-group">
@@ -37,7 +37,7 @@
 							参与范围
 						</div>
 						<div class="after-group">
-							<input required class="input-control" placeholder="仅成员" type="text">
+							<input name="eventJoinRange" required class="input-control" placeholder="仅成员" type="text">
 						</div>
 					</div>
 					<div class="top-empty"></div>
@@ -46,7 +46,7 @@
 							活动名称
 						</div>
 						<div class="after-group">
-							<input required class="input-control" placeholder="不少于五个字" type="text">
+							<input name="eventName" required class="input-control" placeholder="不少于五个字" type="text">
 						</div>
 					</div>
 					<div class="input-group">
@@ -54,7 +54,7 @@
 							开始时间
 						</div>
 						<div class="after-group">
-							<input required class="input-control" type="text">
+							<input name="eventstartTime" required class="input-control" type="text">
 						</div>
 					</div>
 					<div class="input-group">
@@ -62,7 +62,7 @@
 							报名截止
 						</div>
 						<div class="after-group">
-							<input required class="input-control" type="text">
+							<input name="eventSignEndTime" required class="input-control" type="text">
 						</div>
 					</div>
 					<div class="input-group">
@@ -70,7 +70,7 @@
 							活动地点
 						</div>
 						<div class="after-group">
-							<input required class="input-control" placeholder="不填即为待定" type="text">
+							<input name="eventPosition" class="input-control" placeholder="不填即为待定" type="text">
 						</div>
 					</div>
 					<div class="top-empty"></div>
@@ -79,7 +79,7 @@
 							活动名额
 						</div>
 						<div class="after-group">
-							<input required class="input-control" placeholder="不填即为不限" type="text">
+							<input name="eventAmount" class="input-control" placeholder="不填即为不限" type="text">
 						</div>
 					</div>
 					<div class="input-group">
@@ -87,7 +87,7 @@
 							活动费用
 						</div>
 						<div class="after-group">
-							<input required class="input-control" placeholder="不填即为免费" type="text">
+							<input name="eventPrice" class="input-control" placeholder="不填即为免费" type="text">
 						</div>
 					</div>
 					<div class="input-group">
@@ -95,7 +95,7 @@
 							联系方式
 						</div>
 						<div class="after-group">
-							<input required class="input-control" placeholder="必填" type="text">
+							<input name="eventTelephone" required class="input-control" placeholder="必填" type="text">
 						</div>
 					</div>
 				</div>
@@ -104,7 +104,7 @@
 						活动介绍
 					</div>
 					<div class="activity-content">
-						<textarea required name=""></textarea>
+						<textarea required name="eventIntroduce"></textarea>
 					</div>
 					<div class="activity-group">
 						活动海报/宣传图片
@@ -113,7 +113,7 @@
 						<div class="camera">
 							<img src="./assets/camera.png" alt="">
 						</div>
-						<input type="file">
+						<input name="eventImage" type="file">
 					</div>
 				</div>
 			</form>

@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 41);
+/******/ 	return __webpack_require__(__webpack_require__.s = 44);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -77,14 +77,12 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-var $ = function $(query) {
-	return document.querySelector(query);
-};
-var $$ = function $$(query) {
+
+exports.default = function (query) {
 	return document.querySelectorAll(query);
 };
-exports.$ = $;
-exports.$$ = $$;
+
+;
 
 /***/ }),
 
@@ -468,13 +466,13 @@ function updateLink(linkElement, options, obj) {
 
 /***/ }),
 
-/***/ 30:
+/***/ 32:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(52);
+var content = __webpack_require__(54);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(3)(content, {});
@@ -591,15 +589,17 @@ module.exports = function (css) {
 
 /***/ }),
 
-/***/ 41:
+/***/ 44:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(30);
+__webpack_require__(32);
 
 var _query = __webpack_require__(0);
+
+var _query2 = _interopRequireDefault(_query);
 
 var _lineheight = __webpack_require__(5);
 
@@ -607,7 +607,7 @@ var _lineheight2 = _interopRequireDefault(_lineheight);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _lineheight2.default)((0, _query.$$)(".before-group"), (0, _query.$)(".before-group"));
+(0, _lineheight2.default)((0, _query2.default)(".before-group"), (0, _query2.default)(".before-group")[0]);
 
 /***/ }),
 
@@ -630,7 +630,7 @@ exports.default = lineHeight;
 
 /***/ }),
 
-/***/ 52:
+/***/ 54:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -638,7 +638,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.header {\n  height: 6.65635%; }\n\n.empty {\n  height: 11.60991%;\n  background: #f68e54; }\n\n.center {\n  height: 70.12384%; }\n\n.header-in {\n  height: 40.69767%;\n  position: relative;\n  top: 29.65116%; }\n\n.back {\n  height: 100%;\n  position: absolute;\n  margin-left: 10px; }\n\n.app-name {\n  text-align: center; }\n\nform {\n  height: 100%; }\n\n.top-container {\n  height: 40.70796%; }\n\n.bottom-container {\n  height: 29.64602%; }\n\n.input-group {\n  height: 25%;\n  box-sizing: border-box;\n  border-top: 1px solid #e5e5e5;\n  box-sizing: border-box;\n  border-bottom: 1px solid #e5e5e5;\n  box-sizing: border-box; }\n\n.before-group {\n  width: 20%;\n  float: left;\n  height: 100%;\n  color: #757575;\n  font-size: 14px; }\n\n.after-group {\n  width: 80%;\n  height: 100%;\n  float: left; }\n\n.input-control {\n  height: 100%;\n  border: none;\n  width: 100%;\n  font-size: 12px;\n  text-indent: 1em; }\n\n.activity-group {\n  height: 19.40299%;\n  background-color: #e5e5e5; }\n\n.activity-content {\n  height: 80.59701%; }\n\ntextarea {\n  width: 100%;\n  height: 100%;\n  border: none; }\n\n.btn-container {\n  box-sizing: border-box;\n  border-top: 4px solid #e5e5e5;\n  text-align: center; }\n\n.btn {\n  border: none;\n  border-radius: 5px;\n  padding: 6px 40px;\n  margin-top: 20px;\n  color: #00B7FF;\n  font-size: 20px; }\n", ""]);
+exports.push([module.i, "* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  max-width: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.header {\n  height: 6.65635%; }\n\n.empty {\n  height: 11.60991%;\n  background: #f68e54; }\n\n.center {\n  height: 70.12384%; }\n\n.header-in {\n  height: 40.69767%;\n  position: relative;\n  top: 29.65116%; }\n\n.back {\n  height: 100%;\n  position: absolute;\n  margin-left: 10px; }\n\n.app-name {\n  text-align: center; }\n\nform {\n  height: 100%; }\n\n.top-container {\n  height: 40.70796%; }\n\n.bottom-container {\n  height: 29.64602%; }\n\n.input-group {\n  height: 25%;\n  box-sizing: border-box;\n  border-top: 1px solid #e5e5e5;\n  box-sizing: border-box;\n  border-bottom: 1px solid #e5e5e5;\n  box-sizing: border-box; }\n\n.before-group {\n  width: 20%;\n  float: left;\n  height: 100%;\n  color: #757575;\n  font-size: 14px; }\n\n.after-group {\n  width: 80%;\n  height: 100%;\n  float: left; }\n\n.input-control {\n  height: 100%;\n  border: none;\n  width: 100%;\n  font-size: 12px;\n  text-indent: 1em; }\n\n.activity-group {\n  height: 19.40299%;\n  background-color: #e5e5e5; }\n\n.activity-content {\n  height: 80.59701%; }\n\ntextarea {\n  width: 100%;\n  height: 100%;\n  border: none; }\n\n.btn-container {\n  box-sizing: border-box;\n  border-top: 4px solid #e5e5e5;\n  text-align: center; }\n\n.btn {\n  border: none;\n  border-radius: 5px;\n  padding: 6px 40px;\n  margin-top: 20px;\n  color: #00B7FF;\n  font-size: 20px; }\n", ""]);
 
 // exports
 

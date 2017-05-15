@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 31);
+/******/ 	return __webpack_require__(__webpack_require__.s = 33);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -77,14 +77,12 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-var $ = function $(query) {
-	return document.querySelector(query);
-};
-var $$ = function $$(query) {
+
+exports.default = function (query) {
 	return document.querySelectorAll(query);
 };
-exports.$ = $;
-exports.$$ = $$;
+
+;
 
 /***/ }),
 
@@ -171,13 +169,13 @@ function toComment(sourceMap) {
 
 /***/ }),
 
-/***/ 20:
+/***/ 23:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(42);
+var content = __webpack_require__(45);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(3)(content, {});
@@ -495,15 +493,17 @@ function updateLink(linkElement, options, obj) {
 
 /***/ }),
 
-/***/ 31:
+/***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(20);
+__webpack_require__(23);
 
 var _query = __webpack_require__(0);
+
+var _query2 = _interopRequireDefault(_query);
 
 var _lineheight = __webpack_require__(5);
 
@@ -511,8 +511,8 @@ var _lineheight2 = _interopRequireDefault(_lineheight);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _lineheight2.default)((0, _query.$$)(".before-group"), (0, _query.$$)(".before-group")[0]);
-(0, _lineheight2.default)((0, _query.$$)(".activity-group"), (0, _query.$$)(".activity-group")[0]);
+(0, _lineheight2.default)((0, _query2.default)(".before-group"), (0, _query2.default)(".before-group")[0]);
+(0, _lineheight2.default)((0, _query2.default)(".activity-group"), (0, _query2.default)(".activity-group")[0]);
 
 /***/ }),
 
@@ -612,7 +612,7 @@ module.exports = function (css) {
 
 /***/ }),
 
-/***/ 42:
+/***/ 45:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -620,7 +620,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.header {\n  height: 6.65635%; }\n\n.empty {\n  height: 2.70898%;\n  background: #f68e54; }\n\n.center {\n  height: 87.9257%; }\n\n.header-in {\n  height: 40.69767%;\n  position: relative;\n  top: 29.65116%; }\n\n.back {\n  height: 100%;\n  position: absolute;\n  margin-left: 10px; }\n\n.app-name {\n  text-align: center; }\n\nform {\n  height: 100%; }\n\n.top-container {\n  height: 53.71681%; }\n\n.top-empty {\n  height: 2.47117%;\n  background-color: #e5e5e5; }\n\n.input-group {\n  height: 10.28739%;\n  box-sizing: border-box;\n  border-top: 1px solid #e5e5e5;\n  box-sizing: border-box; }\n\n.before-group {\n  width: 20%;\n  float: left;\n  height: 100%;\n  color: #757575;\n  font-size: 14px; }\n\n.after-group {\n  width: 80%;\n  height: 100%;\n  float: left; }\n\n.input-control {\n  height: 100%;\n  border: none;\n  width: 100%;\n  font-size: 12px; }\n\n.bottom-container {\n  height: 46.28319%; }\n\n.activity-group {\n  height: 12.4283%;\n  background-color: #e5e5e5; }\n\n.activity-content {\n  height: 37.5717%; }\n\ntextarea {\n  width: 100%;\n  height: 100%;\n  border: none; }\n\n.camera {\n  height: 40px;\n  display: inline-block; }\n\n.content-center {\n  text-align: center;\n  line-height: 100px;\n  position: relative; }\n\ninput[type=\"file\"] {\n  width: 80px;\n  height: 40px;\n  position: absolute;\n  margin-left: -65px;\n  top: 40%;\n  opacity: 0; }\n\ninput[type=\"file\"] {\n  width: 80px;\n  height: 40px;\n  position: absolute;\n  margin-left: -65px;\n  top: calc(50% - 20px);\n  opacity: 0; }\n\n.pull-right {\n  position: absolute;\n  right: 0px; }\n", ""]);
+exports.push([module.i, "* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  max-width: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.header {\n  height: 6.65635%; }\n\n.empty {\n  height: 2.70898%;\n  background: #f68e54; }\n\n.center {\n  height: 87.9257%; }\n\n.header-in {\n  height: 40.69767%;\n  position: relative;\n  top: 29.65116%; }\n\n.back {\n  height: 100%;\n  position: absolute;\n  margin-left: 10px; }\n\n.app-name {\n  text-align: center; }\n\nform {\n  height: 100%; }\n\n.top-container {\n  height: 53.71681%; }\n\n.top-empty {\n  height: 2.47117%;\n  background-color: #e5e5e5; }\n\n.input-group {\n  height: 10.28739%;\n  box-sizing: border-box;\n  border-top: 1px solid #e5e5e5;\n  box-sizing: border-box; }\n\n.before-group {\n  width: 20%;\n  float: left;\n  height: 100%;\n  color: #757575;\n  font-size: 14px; }\n\n.after-group {\n  width: 80%;\n  height: 100%;\n  float: left; }\n\n.input-control {\n  height: 100%;\n  border: none;\n  width: 100%;\n  font-size: 12px; }\n\n.bottom-container {\n  height: 46.28319%; }\n\n.activity-group {\n  height: 12.4283%;\n  background-color: #e5e5e5; }\n\n.activity-content {\n  height: 37.5717%; }\n\ntextarea {\n  width: 100%;\n  height: 100%;\n  border: none; }\n\n.camera {\n  height: 40px;\n  display: inline-block; }\n\n.content-center {\n  text-align: center;\n  line-height: 100px;\n  position: relative; }\n\ninput[type=\"file\"] {\n  width: 80px;\n  height: 40px;\n  position: absolute;\n  margin-left: -65px;\n  top: 40%;\n  opacity: 0; }\n\ninput[type=\"file\"] {\n  width: 80px;\n  height: 40px;\n  position: absolute;\n  margin-left: -65px;\n  top: calc(50% - 20px);\n  opacity: 0; }\n\n.pull-right {\n  position: absolute;\n  right: 0px; }\n", ""]);
 
 // exports
 

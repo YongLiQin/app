@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 33);
+/******/ 	return __webpack_require__(__webpack_require__.s = 36);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -76,20 +76,18 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-var $ = function $(query) {
-	return document.querySelector(query);
-};
-var $$ = function $$(query) {
+
+exports.default = function (query) {
 	return document.querySelectorAll(query);
 };
-exports.$ = $;
-exports.$$ = $$;
+
+;
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<div class=\"header-in\">\r\n\t<a id=\"back\" class=\"back\" href=\"javascript:;\">\r\n\t\t<img src=\"" + __webpack_require__(7) + "\">\r\n\t</a>\r\n\t<p class=\"app-name\">社交缘</p>\r\n</div>\r\n";
+module.exports = "<div class=\"header-in\">\r\n\t<a id=\"back\" class=\"back\" href=\"javascript:;\">\r\n\t\t<img src=\"" + __webpack_require__(6) + "\">\r\n\t</a>\r\n\t<p class=\"app-name\">社交缘</p>\r\n</div>\r\n";
 
 /***/ }),
 /* 2 */
@@ -586,40 +584,16 @@ exports.default = lineHeight;
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<div class=\"add-wrap\">\r\n\t<div class=\"add-container\">\r\n\t\t<img src='" + __webpack_require__(8) + "'>\r\n\t</div>\r\n</div>\r\n<div class=\"menu-wrap\">\r\n\t<a class=\"menu-container pull-left\">\r\n\t\t<img src='" + __webpack_require__(10) + "'>\r\n\t</a>\r\n\t<a class=\"menu-container pull-left\">\r\n\t\t<img src='" + __webpack_require__(11) + "'>\r\n\t</a>\r\n\t<a class=\"menu-container pull-left\">\r\n\t\t<img src='" + __webpack_require__(9) + "'>\r\n\t</a>\r\n</div>";
+module.exports = __webpack_require__.p + "assets/arrow-22d44.png";
 
 /***/ }),
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/arrow-22d44.png";
+module.exports = "<div class=\"add-wrap\">\r\n\t<div class=\"add-container\">\r\n\t\t<img src='" + __webpack_require__(9) + "'>\r\n\t</div>\r\n</div>\r\n<div class=\"menu-wrap\">\r\n\t<a class=\"menu-container pull-left\">\r\n\t\t<img src='" + __webpack_require__(11) + "'>\r\n\t</a>\r\n\t<a class=\"menu-container pull-left\">\r\n\t\t<img src='" + __webpack_require__(12) + "'>\r\n\t</a>\r\n\t<a class=\"menu-container pull-left\">\r\n\t\t<img src='" + __webpack_require__(10) + "'>\r\n\t</a>\r\n</div>";
 
 /***/ }),
 /* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/iconfont-c1b19.png";
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/man-f05b5.png";
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/map-fadb5.png";
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/news-baff5.png";
-
-/***/ }),
-/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -644,6 +618,30 @@ var circleHeight = function circleHeight(dom1, dom2) {
 };
 exports.circleWidth = circleWidth;
 exports.circleHeight = circleHeight;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/iconfont-c1b19.png";
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/man-f05b5.png";
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/map-fadb5.png";
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/news-baff5.png";
 
 /***/ }),
 /* 13 */
@@ -675,13 +673,15 @@ module.exports = __webpack_require__.p + "assets/smallman-7947f.png";
 /* 19 */,
 /* 20 */,
 /* 21 */,
-/* 22 */
+/* 22 */,
+/* 23 */,
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(44);
+var content = __webpack_require__(46);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(3)(content, {});
@@ -701,8 +701,6 @@ if(false) {
 }
 
 /***/ }),
-/* 23 */,
-/* 24 */,
 /* 25 */,
 /* 26 */,
 /* 27 */,
@@ -711,19 +709,22 @@ if(false) {
 /* 30 */,
 /* 31 */,
 /* 32 */,
-/* 33 */
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(22);
+__webpack_require__(24);
 
 var _header = __webpack_require__(1);
 
 var _header2 = _interopRequireDefault(_header);
 
-var _footer = __webpack_require__(6);
+var _footer = __webpack_require__(7);
 
 var _footer2 = _interopRequireDefault(_footer);
 
@@ -733,7 +734,9 @@ var _navbar2 = _interopRequireDefault(_navbar);
 
 var _query = __webpack_require__(0);
 
-var _circle = __webpack_require__(12);
+var _query2 = _interopRequireDefault(_query);
+
+var _circle = __webpack_require__(8);
 
 var _lineheight = __webpack_require__(5);
 
@@ -741,20 +744,17 @@ var _lineheight2 = _interopRequireDefault(_lineheight);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var header = (0, _query.$)("#header");
-var footer = (0, _query.$)("#footer");
-var navBar = (0, _query.$)("#navBar");
+var header = (0, _query2.default)("#header")[0];
+var footer = (0, _query2.default)("#footer")[0];
+var navBar = (0, _query2.default)("#navBar")[0];
 header.innerHTML = _header2.default;
 footer.innerHTML = _footer2.default;
 navBar.innerHTML = _navbar2.default;
-(0, _circle.circleHeight)((0, _query.$$)(".circle"), (0, _query.$)("#circle-wrap"));
-(0, _lineheight2.default)((0, _query.$$)(".friend-msg"), (0, _query.$)(".friend-msg"));
-(0, _lineheight2.default)((0, _query.$$)(".send-msg"), (0, _query.$)(".send-msg"));
+(0, _circle.circleHeight)((0, _query2.default)(".circle"), (0, _query2.default)("#circle-wrap")[0]);
+(0, _lineheight2.default)((0, _query2.default)(".friend-msg"), (0, _query2.default)(".friend-msg")[0]);
+(0, _lineheight2.default)((0, _query2.default)(".send-msg"), (0, _query2.default)(".send-msg")[0]);
 
 /***/ }),
-/* 34 */,
-/* 35 */,
-/* 36 */,
 /* 37 */,
 /* 38 */,
 /* 39 */,
@@ -762,7 +762,9 @@ navBar.innerHTML = _navbar2.default;
 /* 41 */,
 /* 42 */,
 /* 43 */,
-/* 44 */
+/* 44 */,
+/* 45 */,
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -770,7 +772,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, ".header {\n  height: 6.65635%; }\n\n.header-in {\n  height: 40.69767%;\n  position: relative;\n  top: 29.65116%; }\n\n.back {\n  height: 100%;\n  position: absolute;\n  margin-left: 10px; }\n\n.app-name {\n  text-align: center; }\n\n.footer {\n  height: 14.70588%;\n  background: #f68e54; }\n\n.add-wrap {\n  height: 49.21466%;\n  box-sizing: border-box;\n  border-bottom: 1px solid white; }\n\n.add-container, .menu-container {\n  height: 90%;\n  position: relative;\n  top: 5%;\n  text-align: center; }\n\n.menu-wrap {\n  height: 50.78534%; }\n\n.menu-container {\n  display: block;\n  width: 33.3333%;\n  text-align: center; }\n\n.nav-group {\n  width: 33.33%;\n  float: left;\n  height: 80%;\n  text-align: center;\n  position: relative;\n  top: 10%; }\n\n* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.center {\n  height: 78.63777%; }\n\n.nav-bar {\n  height: 5.01969%;\n  background: #f68e54; }\n\n.content {\n  height: 94.98031%;\n  background-color: #f5ba99;\n  overflow: auto; }\n\n.friend-group {\n  height: 16.66667%;\n  background-color: green; }\n\n.friend-group {\n  box-sizing: border-box;\n  border-top: 1px solid white; }\n\n.friend-group:first-child {\n  border: none; }\n\n.friend-group-in {\n  height: 50.81081%;\n  position: relative;\n  top: 24.59459%;\n  width: 90%;\n  margin: 0 auto; }\n\n.friend-msg {\n  margin-left: 20px;\n  height: 100%; }\n\n.send-msg {\n  height: 100%; }\n\n.btn {\n  background: #d2d2d2;\n  padding: 6px 8px;\n  border-radius: 4px; }\n", ""]);
+exports.push([module.i, ".header {\n  height: 6.65635%; }\n\n.header-in {\n  height: 40.69767%;\n  position: relative;\n  top: 29.65116%; }\n\n.back {\n  height: 100%;\n  position: absolute;\n  margin-left: 10px; }\n\n.app-name {\n  text-align: center; }\n\n.footer {\n  height: 14.70588%;\n  background: #f68e54; }\n\n.add-wrap {\n  height: 49.21466%;\n  box-sizing: border-box;\n  border-bottom: 1px solid white; }\n\n.add-container, .menu-container {\n  height: 90%;\n  position: relative;\n  top: 5%;\n  text-align: center; }\n\n.menu-wrap {\n  height: 50.78534%; }\n\n.menu-container {\n  display: block;\n  width: 33.3333%;\n  text-align: center; }\n\n.nav-group {\n  width: 33.33%;\n  float: left;\n  height: 80%;\n  text-align: center;\n  position: relative;\n  top: 10%; }\n\n* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  max-width: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.center {\n  height: 78.63777%; }\n\n.nav-bar {\n  height: 5.01969%;\n  background: #f68e54; }\n\n.content {\n  height: 94.98031%;\n  background-color: #f5ba99;\n  overflow: auto; }\n\n.friend-group {\n  height: 16.66667%;\n  background-color: green; }\n\n.friend-group {\n  box-sizing: border-box;\n  border-top: 1px solid white; }\n\n.friend-group:first-child {\n  border: none; }\n\n.friend-group-in {\n  height: 50.81081%;\n  position: relative;\n  top: 24.59459%;\n  width: 90%;\n  margin: 0 auto; }\n\n.friend-msg {\n  margin-left: 20px;\n  height: 100%; }\n\n.send-msg {\n  height: 100%; }\n\n.btn {\n  background: #d2d2d2;\n  padding: 6px 8px;\n  border-radius: 4px; }\n", ""]);
 
 // exports
 

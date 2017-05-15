@@ -1,7 +1,6 @@
 import "../sass/chat.scss";
 import tplHeader from "../component/header.html";
 import $ from "./query";
-// import {circleWidth, circleHeight} from "./circle";
 import renderChat from './renderchat';
 const header = $("#header")[0];
 const chat = $("#chat")[0];
@@ -10,7 +9,6 @@ const send = $('#send')[0];
 const msg = $('#msg')[0];
 
 header.innerHTML = tplHeader;
-// circleWidth($(".circle"), $(".circle")[0]);
 chat.scrollTop = chat.scrollHeight - chat.offsetHeight;
 
 localStorage.setItem('username', '覃永利');

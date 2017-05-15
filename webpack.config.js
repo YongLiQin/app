@@ -15,6 +15,7 @@ module.exports = {
 		chat: "./src/javascripts/chat.js",
 		land: "./src/javascripts/land.js",
 		member: "./src/javascripts/member.js",
+		chatroom: "./src/javascripts/chatroom.js"
 	},
 	output: {
 		path: path.join(__dirname, "dist"),
@@ -125,6 +126,12 @@ module.exports = {
 			chunks: ["member"],
 			inject: "body",
 			filename: "member.html"
+		}),
+		new htmlWebpackPlugin({
+			template: "./src/chatroom.html",
+			chunks: ["chatroom"],
+			inject: "body",
+			filename: "chatroom.html"
 		}),
 		new webpack.LoaderOptionsPlugin({
 			options: {

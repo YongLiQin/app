@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 36);
+/******/ 	return __webpack_require__(__webpack_require__.s = 39);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -77,14 +77,12 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-var $ = function $(query) {
-	return document.querySelector(query);
-};
-var $$ = function $$(query) {
+
+exports.default = function (query) {
 	return document.querySelectorAll(query);
 };
-exports.$ = $;
-exports.$$ = $$;
+
+;
 
 /***/ }),
 
@@ -171,13 +169,13 @@ function toComment(sourceMap) {
 
 /***/ }),
 
-/***/ 25:
+/***/ 27:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(47);
+var content = __webpack_require__(49);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(3)(content, {});
@@ -495,15 +493,17 @@ function updateLink(linkElement, options, obj) {
 
 /***/ }),
 
-/***/ 36:
+/***/ 39:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(25);
+__webpack_require__(27);
 
 var _query = __webpack_require__(0);
+
+var _query2 = _interopRequireDefault(_query);
 
 var _lineheight = __webpack_require__(5);
 
@@ -511,7 +511,7 @@ var _lineheight2 = _interopRequireDefault(_lineheight);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _lineheight2.default)((0, _query.$$)("#wrap"), (0, _query.$)("#wrap"));
+(0, _lineheight2.default)((0, _query2.default)("#wrap"), (0, _query2.default)("#wrap")[0]);
 
 /***/ }),
 
@@ -611,7 +611,7 @@ module.exports = function (css) {
 
 /***/ }),
 
-/***/ 47:
+/***/ 49:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -619,7 +619,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.land > .land-top > div > img {\n  vertical-align: middle;\n  display: inline-block; }\n\nbody {\n  background-image: url(" + __webpack_require__(55) + ");\n  background-size: 100% 100%; }\n\n.container {\n  height: 100%; }\n\n.appname {\n  font-size: 3em;\n  font-weight: 600;\n  color: white;\n  text-align: center;\n  margin-top: 12.5%; }\n\n.land {\n  margin-top: 7.8125%;\n  height: 24.60938%; }\n  .land > .land-top {\n    height: 33.33333%;\n    width: 80%;\n    margin: 0 auto;\n    position: relative; }\n    .land > .land-top > div {\n      margin-left: 5px;\n      height: 100%;\n      width: 20px;\n      position: absolute; }\n      .land > .land-top > div > img {\n        width: 25px; }\n    .land > .land-top > input {\n      width: 100%;\n      height: 100%;\n      border-radius: 5px;\n      border: none;\n      font-size: 1.2em;\n      text-indent: 2em;\n      background-color: #b16c4d;\n      color: white; }\n    .land > .land-top input::-moz-input-placeholder {\n      color: white; }\n    .land > .land-top input::-webkit-input-placeholder {\n      color: white; }\n    .land > .land-top input::-moz-placeholder {\n      color: white; }\n    .land > .land-top input:-ms-input-placeholder {\n      color: white; }\n    .land > .land-top input::placeholder {\n      color: white; }\n  .land > .land-bottom {\n    height: 66.66667%;\n    text-align: center;\n    position: relative; }\n    .land > .land-bottom > input {\n      width: 40%;\n      padding: 4px 0;\n      color: white;\n      background-color: #00a0e9;\n      font-size: 1.4em;\n      border-radius: 4px;\n      border: none;\n      position: absolute;\n      bottom: 0;\n      margin-left: -20%; }\n    .land > .land-bottom > a {\n      position: absolute;\n      right: 0;\n      bottom: 0;\n      padding: 4px;\n      background-color: #00a0e9;\n      color: white;\n      border-radius: 4px; }\n", ""]);
+exports.push([module.i, "* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  max-width: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.land > .land-top > div > img {\n  vertical-align: middle;\n  display: inline-block; }\n\nbody {\n  background-image: url(" + __webpack_require__(57) + ");\n  background-size: 100% 100%; }\n\n.container {\n  height: 100%; }\n\n.appname {\n  font-size: 3em;\n  font-weight: 600;\n  color: white;\n  text-align: center;\n  margin-top: 12.5%; }\n\n.land {\n  margin-top: 7.8125%;\n  height: 24.60938%; }\n  .land > .land-top {\n    height: 33.33333%;\n    width: 80%;\n    margin: 0 auto;\n    position: relative; }\n    .land > .land-top > div {\n      margin-left: 5px;\n      height: 100%;\n      width: 20px;\n      position: absolute; }\n      .land > .land-top > div > img {\n        width: 25px; }\n    .land > .land-top > input {\n      width: 100%;\n      height: 100%;\n      border-radius: 5px;\n      border: none;\n      font-size: 1.2em;\n      text-indent: 2em;\n      background-color: #b16c4d;\n      color: white; }\n    .land > .land-top input::-moz-input-placeholder {\n      color: white; }\n    .land > .land-top input::-webkit-input-placeholder {\n      color: white; }\n    .land > .land-top input::-moz-placeholder {\n      color: white; }\n    .land > .land-top input:-ms-input-placeholder {\n      color: white; }\n    .land > .land-top input::placeholder {\n      color: white; }\n  .land > .land-bottom {\n    height: 66.66667%;\n    text-align: center;\n    position: relative; }\n    .land > .land-bottom > input {\n      width: 40%;\n      padding: 4px 0;\n      color: white;\n      background-color: #00a0e9;\n      font-size: 1.4em;\n      border-radius: 4px;\n      border: none;\n      position: absolute;\n      bottom: 0;\n      margin-left: -20%; }\n    .land > .land-bottom > a {\n      position: absolute;\n      right: 0;\n      bottom: 0;\n      padding: 4px;\n      background-color: #00a0e9;\n      color: white;\n      border-radius: 4px; }\n", ""]);
 
 // exports
 
@@ -645,7 +645,7 @@ exports.default = lineHeight;
 
 /***/ }),
 
-/***/ 55:
+/***/ 57:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/land-0c9c7.jpg";

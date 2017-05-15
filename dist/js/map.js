@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 37);
+/******/ 	return __webpack_require__(__webpack_require__.s = 40);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -76,20 +76,18 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-var $ = function $(query) {
-	return document.querySelector(query);
-};
-var $$ = function $$(query) {
+
+exports.default = function (query) {
 	return document.querySelectorAll(query);
 };
-exports.$ = $;
-exports.$$ = $$;
+
+;
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<div class=\"header-in\">\r\n\t<a id=\"back\" class=\"back\" href=\"javascript:;\">\r\n\t\t<img src=\"" + __webpack_require__(7) + "\">\r\n\t</a>\r\n\t<p class=\"app-name\">社交缘</p>\r\n</div>\r\n";
+module.exports = "<div class=\"header-in\">\r\n\t<a id=\"back\" class=\"back\" href=\"javascript:;\">\r\n\t\t<img src=\"" + __webpack_require__(6) + "\">\r\n\t</a>\r\n\t<p class=\"app-name\">社交缘</p>\r\n</div>\r\n";
 
 /***/ }),
 /* 2 */
@@ -569,75 +567,77 @@ module.exports = function (css) {
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<div class=\"add-wrap\">\r\n\t<div class=\"add-container\">\r\n\t\t<img src='" + __webpack_require__(8) + "'>\r\n\t</div>\r\n</div>\r\n<div class=\"menu-wrap\">\r\n\t<a class=\"menu-container pull-left\">\r\n\t\t<img src='" + __webpack_require__(10) + "'>\r\n\t</a>\r\n\t<a class=\"menu-container pull-left\">\r\n\t\t<img src='" + __webpack_require__(11) + "'>\r\n\t</a>\r\n\t<a class=\"menu-container pull-left\">\r\n\t\t<img src='" + __webpack_require__(9) + "'>\r\n\t</a>\r\n</div>";
+module.exports = __webpack_require__.p + "assets/arrow-22d44.png";
 
 /***/ }),
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/arrow-22d44.png";
+module.exports = "<div class=\"add-wrap\">\r\n\t<div class=\"add-container\">\r\n\t\t<img src='" + __webpack_require__(9) + "'>\r\n\t</div>\r\n</div>\r\n<div class=\"menu-wrap\">\r\n\t<a class=\"menu-container pull-left\">\r\n\t\t<img src='" + __webpack_require__(11) + "'>\r\n\t</a>\r\n\t<a class=\"menu-container pull-left\">\r\n\t\t<img src='" + __webpack_require__(12) + "'>\r\n\t</a>\r\n\t<a class=\"menu-container pull-left\">\r\n\t\t<img src='" + __webpack_require__(10) + "'>\r\n\t</a>\r\n</div>";
 
 /***/ }),
-/* 8 */
+/* 8 */,
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/iconfont-c1b19.png";
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/man-f05b5.png";
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/map-fadb5.png";
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/news-baff5.png";
 
 /***/ }),
-/* 12 */,
 /* 13 */,
 /* 14 */,
 /* 15 */,
 /* 16 */,
-/* 17 */
+/* 17 */,
+/* 18 */,
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<div class=\"search-in\">\r\n\t<div class=\"pull-left select-group\">\r\n\t\t<img src=\"" + __webpack_require__(19) + "\">\r\n\t\t筛选（标签/地点/时间）\r\n\t</div>\r\n\t<div class=\"pull-right select-group\">\r\n\t\t<img src=\"" + __webpack_require__(18) + "\" alt=\"\">\r\n\t\t搜索（地点/活动/人物）\r\n\t</div>\r\n</div>";
+module.exports = "<div class=\"search-in\">\r\n\t<div class=\"pull-left select-group\">\r\n\t\t<img src=\"" + __webpack_require__(22) + "\">\r\n\t\t筛选（标签/地点/时间）\r\n\t</div>\r\n\t<div class=\"pull-right select-group\">\r\n\t\t<img src=\"" + __webpack_require__(21) + "\" alt=\"\">\r\n\t\t搜索（地点/活动/人物）\r\n\t</div>\r\n</div>";
 
 /***/ }),
-/* 18 */
+/* 20 */,
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/search-48115.png";
 
 /***/ }),
-/* 19 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/select-23e69.png";
 
 /***/ }),
-/* 20 */,
-/* 21 */,
-/* 22 */,
 /* 23 */,
 /* 24 */,
 /* 25 */,
-/* 26 */
+/* 26 */,
+/* 27 */,
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(48);
+var content = __webpack_require__(50);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(3)(content, {});
@@ -657,8 +657,6 @@ if(false) {
 }
 
 /***/ }),
-/* 27 */,
-/* 28 */,
 /* 29 */,
 /* 30 */,
 /* 31 */,
@@ -667,41 +665,43 @@ if(false) {
 /* 34 */,
 /* 35 */,
 /* 36 */,
-/* 37 */
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(26);
+__webpack_require__(28);
 
 var _header = __webpack_require__(1);
 
 var _header2 = _interopRequireDefault(_header);
 
-var _footer = __webpack_require__(6);
+var _footer = __webpack_require__(7);
 
 var _footer2 = _interopRequireDefault(_footer);
 
-var _search = __webpack_require__(17);
+var _search = __webpack_require__(19);
 
 var _search2 = _interopRequireDefault(_search);
 
 var _query = __webpack_require__(0);
 
+var _query2 = _interopRequireDefault(_query);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var header = (0, _query.$)("#header");
-var footer = (0, _query.$)("#footer");
-var search = (0, _query.$)("#search");
+var header = (0, _query2.default)("#header")[0];
+var footer = (0, _query2.default)("#footer")[0];
+var search = (0, _query2.default)("#search")[0];
 header.innerHTML = _header2.default;
 footer.innerHTML = _footer2.default;
 search.innerHTML = _search2.default;
 
 /***/ }),
-/* 38 */,
-/* 39 */,
-/* 40 */,
 /* 41 */,
 /* 42 */,
 /* 43 */,
@@ -709,7 +709,9 @@ search.innerHTML = _search2.default;
 /* 45 */,
 /* 46 */,
 /* 47 */,
-/* 48 */
+/* 48 */,
+/* 49 */,
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -717,18 +719,18 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.header {\n  height: 6.65635%; }\n\n.header-in {\n  height: 40.69767%;\n  position: relative;\n  top: 29.65116%; }\n\n.back {\n  height: 100%;\n  position: absolute;\n  margin-left: 10px; }\n\n.app-name {\n  text-align: center; }\n\n.footer {\n  height: 14.70588%;\n  background: #f68e54; }\n\n.add-wrap {\n  height: 49.21466%;\n  box-sizing: border-box;\n  border-bottom: 1px solid white; }\n\n.add-container, .menu-container {\n  height: 90%;\n  position: relative;\n  top: 5%;\n  text-align: center; }\n\n.menu-wrap {\n  height: 50.78534%; }\n\n.menu-container {\n  display: block;\n  width: 33.3333%;\n  text-align: center; }\n\n.search-in {\n  width: 86.66667%;\n  height: 80.64516%;\n  position: relative;\n  top: 9.67742%;\n  margin: 0 auto; }\n\n.select-group {\n  width: 49%;\n  height: 100%;\n  background-color: white;\n  border-radius: 4px;\n  font-size: 10px;\n  box-sizing: border-box;\n  padding: 3px; }\n\n.center {\n  height: 78.63777%;\n  position: relative; }\n\n.search {\n  height: 6.10236%;\n  box-sizing: border-box;\n  border-top: 1px solid white;\n  background: #f68e54; }\n\n.map {\n  height: 93.89764%; }\n\n.activity {\n  height: 39.37008%;\n  position: absolute;\n  top: 13.38583%;\n  width: 100%;\n  background: #f68e54; }\n\nul {\n  height: 100%; }\n\n.search-link {\n  display: block;\n  height: 50%; }\n\n.select-container {\n  width: 65%;\n  font-size: 12px;\n  color: white;\n  display: inline-block; }\n\n.tag-select {\n  width: 20%;\n  text-align: center; }\n\n.search-group {\n  height: 25%;\n  box-sizing: border-box;\n  border-top: 1px solid #ffad6a;\n  text-align: center; }\n\n.search-group:first-child {\n  border: none; }\n\n.input-group {\n  width: 65%;\n  border-radius: 4px;\n  height: 50%;\n  border: none; }\n\n.before-group {\n  height: 50%;\n  display: block;\n  margin-left: 20px;\n  color: white; }\n\n.join-activity {\n  height: 75.91623%;\n  width: 100%;\n  position: absolute;\n  bottom: 0px;\n  z-index: 400; }\n\n.join-top {\n  height: 62.06897%;\n  background-image: url(" + __webpack_require__(54) + ");\n  background-size: 100% 100%; }\n\n.join-bottom {\n  height: 37.93103%;\n  background-color: #22252b;\n  padding: 10px;\n  box-sizing: border-box;\n  position: relative;\n  color: white; }\n\n.join-panel {\n  width: 56.66667%;\n  height: 50%;\n  position: relative;\n  top: 50%;\n  margin: 0 auto;\n  color: white; }\n\n.btn {\n  width: 50%;\n  padding: 5px 0;\n  background-color: #3f4550;\n  display: inline-block;\n  position: absolute;\n  bottom: 0px;\n  margin-left: 25%;\n  margin-bottom: 10px;\n  border-radius: 4px;\n  text-align: center; }\n\n.btn img {\n  width: 12%;\n  vertical-align: middle; }\n\n.before-circle {\n  width: 40px;\n  height: 40px;\n  background-color: red;\n  position: absolute;\n  margin-left: -50px; }\n\n.after-circle {\n  width: 40px;\n  height: 40px;\n  position: absolute;\n  right: 0;\n  margin-top: -55px;\n  margin-right: 8%; }\n", ""]);
+exports.push([module.i, "* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  max-width: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.header {\n  height: 6.65635%; }\n\n.header-in {\n  height: 40.69767%;\n  position: relative;\n  top: 29.65116%; }\n\n.back {\n  height: 100%;\n  position: absolute;\n  margin-left: 10px; }\n\n.app-name {\n  text-align: center; }\n\n.footer {\n  height: 14.70588%;\n  background: #f68e54; }\n\n.add-wrap {\n  height: 49.21466%;\n  box-sizing: border-box;\n  border-bottom: 1px solid white; }\n\n.add-container, .menu-container {\n  height: 90%;\n  position: relative;\n  top: 5%;\n  text-align: center; }\n\n.menu-wrap {\n  height: 50.78534%; }\n\n.menu-container {\n  display: block;\n  width: 33.3333%;\n  text-align: center; }\n\n.search-in {\n  width: 86.66667%;\n  height: 80.64516%;\n  position: relative;\n  top: 9.67742%;\n  margin: 0 auto; }\n\n.select-group {\n  width: 49%;\n  height: 100%;\n  background-color: white;\n  border-radius: 4px;\n  font-size: 10px;\n  box-sizing: border-box;\n  padding: 3px; }\n\n.center {\n  height: 78.63777%;\n  position: relative; }\n\n.search {\n  height: 6.10236%;\n  box-sizing: border-box;\n  border-top: 1px solid white;\n  background: #f68e54; }\n\n.map {\n  height: 93.89764%; }\n\n.activity {\n  height: 39.37008%;\n  position: absolute;\n  top: 13.38583%;\n  width: 100%;\n  background: #f68e54; }\n\nul {\n  height: 100%; }\n\n.search-link {\n  display: block;\n  height: 50%; }\n\n.select-container {\n  width: 65%;\n  font-size: 12px;\n  color: white;\n  display: inline-block; }\n\n.tag-select {\n  width: 20%;\n  text-align: center; }\n\n.search-group {\n  height: 25%;\n  box-sizing: border-box;\n  border-top: 1px solid #ffad6a;\n  text-align: center; }\n\n.search-group:first-child {\n  border: none; }\n\n.input-group {\n  width: 65%;\n  border-radius: 4px;\n  height: 50%;\n  border: none; }\n\n.before-group {\n  height: 50%;\n  display: block;\n  margin-left: 20px;\n  color: white; }\n\n.join-activity {\n  height: 75.91623%;\n  width: 100%;\n  position: absolute;\n  bottom: 0px;\n  z-index: 400; }\n\n.join-top {\n  height: 62.06897%;\n  background-image: url(" + __webpack_require__(56) + ");\n  background-size: 100% 100%; }\n\n.join-bottom {\n  height: 37.93103%;\n  background-color: #22252b;\n  padding: 10px;\n  box-sizing: border-box;\n  position: relative;\n  color: white; }\n\n.join-panel {\n  width: 56.66667%;\n  height: 50%;\n  position: relative;\n  top: 50%;\n  margin: 0 auto;\n  color: white; }\n\n.btn {\n  width: 50%;\n  padding: 5px 0;\n  background-color: #3f4550;\n  display: inline-block;\n  position: absolute;\n  bottom: 0px;\n  margin-left: 25%;\n  margin-bottom: 10px;\n  border-radius: 4px;\n  text-align: center; }\n\n.btn img {\n  width: 12%;\n  vertical-align: middle; }\n\n.before-circle {\n  width: 40px;\n  height: 40px;\n  background-color: red;\n  position: absolute;\n  margin-left: -50px; }\n\n.after-circle {\n  width: 40px;\n  height: 40px;\n  position: absolute;\n  right: 0;\n  margin-top: -55px;\n  margin-right: 8%; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 49 */,
-/* 50 */,
 /* 51 */,
 /* 52 */,
 /* 53 */,
-/* 54 */
+/* 54 */,
+/* 55 */,
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/lake-a12a0.png";
