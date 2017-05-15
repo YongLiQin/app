@@ -109,11 +109,15 @@ var _query = __webpack_require__(0);
 
 var _query2 = _interopRequireDefault(_query);
 
+var _renderstyle = __webpack_require__(60);
+
+var _renderstyle2 = _interopRequireDefault(_renderstyle);
+
 var _circle = __webpack_require__(8);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = function (direction, content) {
+exports.default = function (direction, content, src) {
 	var chat = (0, _query2.default)('#chat')[0];
 	var time = (0, _query2.default)('.time');
 	if (!time.length) {
@@ -165,8 +169,11 @@ exports.default = function (direction, content) {
 	wrap.appendChild(circle);
 	wrap.appendChild(msg);
 	chat.appendChild(wrap);
+
 	(0, _circle.circleWidth)((0, _query2.default)(".circle"), (0, _query2.default)(".circle")[0]);
 	chat.scrollTop = chat.scrollHeight - chat.offsetHeight;
+	(0, _renderstyle2.default)((0, _query2.default)('.circle-left'), 'backgroundImage', 'url(' + src.left + ')');
+	(0, _renderstyle2.default)((0, _query2.default)('.circle-right'), 'backgroundImage', 'url(' + src.right + ')');
 };
 
 /***/ }),
@@ -289,7 +296,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, ".header {\n  height: 6.65635%; }\n\n.header-in {\n  height: 40.69767%;\n  position: relative;\n  top: 29.65116%; }\n\n.back {\n  height: 100%;\n  position: absolute;\n  margin-left: 10px; }\n\n.app-name {\n  text-align: center; }\n\n* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  max-width: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.center {\n  height: 84.82972%;\n  position: relative;\n  background-color: #f5ba99; }\n\n.footer {\n  height: 8.51393%;\n  background-color: #131518; }\n\n.chat-content {\n  margin-left: 4.26667%;\n  margin-right: 4.26667%;\n  box-sizing: border-box;\n  height: 100%;\n  overflow-y: auto; }\n\n.chat-group, .time {\n  margin-top: 20px; }\n\n.time {\n  text-align: center;\n  color: white; }\n\n.circle-right {\n  width: 13.99417%;\n  margin-left: 2.91545%;\n  height: 20px; }\n\n.circle-left {\n  height: 20px;\n  width: 13.99417%;\n  margin-right: 2.91545%; }\n\n.chat-control {\n  max-width: 69.09621%;\n  word-break: break-all;\n  padding: 10px 5px;\n  box-sizing: border-box;\n  background: white;\n  border-radius: 10px; }\n\n.footer-in {\n  width: 91.46667%;\n  height: 68.18182%;\n  position: relative;\n  top: 15.90909%;\n  margin: 0 auto; }\n\n.methods, .send, .msg {\n  height: 100%;\n  float: left; }\n\n.methods, .send {\n  width: 10.20408%; }\n\n.msg {\n  width: 79.59184%;\n  text-align: center; }\n  .msg > input {\n    height: 100%;\n    width: 86.99634%;\n    border: none;\n    background-color: #131518;\n    text-indent: 1em;\n    color: white; }\n\n.send-photo, .methods > input {\n  position: absolute;\n  margin-top: -18%; }\n\n.methods > input {\n  width: 60px;\n  height: 35px;\n  opacity: 0; }\n", ""]);
+exports.push([module.i, ".header {\n  height: 6.65635%; }\n\n.header-in {\n  height: 40.69767%;\n  position: relative;\n  top: 29.65116%; }\n\n.back {\n  height: 100%;\n  position: absolute;\n  margin-left: 10px; }\n\n.app-name {\n  text-align: center; }\n\n* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  max-width: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red;\n  background-size: 100%; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.center {\n  height: 84.82972%;\n  position: relative;\n  background-color: #f5ba99; }\n\n.footer {\n  height: 8.51393%;\n  background-color: #131518; }\n\n.chat-content {\n  margin-left: 4.26667%;\n  margin-right: 4.26667%;\n  box-sizing: border-box;\n  height: 100%;\n  overflow-y: auto; }\n\n.chat-group, .time {\n  margin-top: 20px; }\n\n.time {\n  text-align: center;\n  color: white; }\n\n.circle-right,\n.circle-left {\n  background-size: 100%; }\n\n.circle-right {\n  width: 13.99417%;\n  margin-left: 2.91545%;\n  height: 20px; }\n\n.circle-left {\n  height: 20px;\n  width: 13.99417%;\n  margin-right: 2.91545%; }\n\n.chat-control {\n  max-width: 69.09621%;\n  word-break: break-all;\n  padding: 10px 5px;\n  box-sizing: border-box;\n  background: white;\n  border-radius: 10px; }\n\n.footer-in {\n  width: 91.46667%;\n  height: 68.18182%;\n  position: relative;\n  top: 15.90909%;\n  margin: 0 auto; }\n\n.methods, .send, .msg {\n  height: 100%;\n  float: left; }\n\n.methods, .send {\n  width: 10.20408%; }\n\n.msg {\n  width: 79.59184%;\n  text-align: center; }\n  .msg > input {\n    height: 100%;\n    width: 86.99634%;\n    border: none;\n    background-color: #131518;\n    text-indent: 1em;\n    color: white; }\n\n.send-photo, .methods > input {\n  position: absolute;\n  margin-top: -18%; }\n\n.methods > input {\n  width: 60px;\n  height: 35px;\n  opacity: 0; }\n", ""]);
 
 // exports
 
@@ -639,6 +646,11 @@ localStorage.setItem('other', '石强华');
 
 (0, _rendertext2.default)((0, _query2.default)('#app-name')[0], localStorage.username + ",\n\t" + localStorage.other);
 
+var src = {
+	left: 'http://localhost:8080/images/goodfriend.jpg',
+	right: 'http://localhost:8080/images/star.jpg'
+};
+
 var socket = new WebSocket('ws://localhost:3000');
 
 socket.onopen = function () {
@@ -650,7 +662,7 @@ socket.onopen = function () {
 };
 
 socket.onmessage = function (e) {
-	(0, _renderchat2.default)('right', e.data);
+	(0, _renderchat2.default)('right', e.data, src);
 };
 
 send.onclick = function () {
@@ -662,12 +674,14 @@ send.onclick = function () {
 	};
 
 	socket.send(JSON.stringify(data));
-	(0, _renderchat2.default)('left', msg.value);
+	(0, _renderchat2.default)('left', msg.value, src);
+	msg.value = '';
 };
 
 image.onchange = function () {
 	socket.send(this.files[0]);
-	(0, _renderchat2.default)('left', this.files[0]);
+	(0, _renderchat2.default)('left', this.files[0], src);
+
 	var data = {
 		login: false,
 		array: false,
@@ -815,6 +829,24 @@ exports.default = function (dom, text) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/arrow-22d44.png";
+
+/***/ }),
+
+/***/ 60:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+exports.default = function (dom, target, value) {
+	for (var i = 0; i < dom.length; i++) {
+		dom[i].style[target] = value;
+	}
+};
 
 /***/ }),
 

@@ -736,6 +736,10 @@ var _query = __webpack_require__(0);
 
 var _query2 = _interopRequireDefault(_query);
 
+var _renderstyle = __webpack_require__(60);
+
+var _renderstyle2 = _interopRequireDefault(_renderstyle);
+
 var _circle = __webpack_require__(8);
 
 var _lineheight = __webpack_require__(5);
@@ -751,8 +755,24 @@ header.innerHTML = _header2.default;
 footer.innerHTML = _footer2.default;
 navBar.innerHTML = _navbar2.default;
 (0, _circle.circleHeight)((0, _query2.default)(".circle"), (0, _query2.default)("#circle-wrap")[0]);
-(0, _lineheight2.default)((0, _query2.default)(".friend-msg"), (0, _query2.default)(".friend-msg")[0]);
+// lineHeight($(".friend-msg"), $(".friend-msg")[0]);
 (0, _lineheight2.default)((0, _query2.default)(".send-msg"), (0, _query2.default)(".send-msg")[0]);
+
+var news = {
+	src: 'http://localhost:8080/images/star.jpg',
+	new1: "haha",
+	new2: 'hehe'
+};
+render([news, news]);
+
+function render(msg) {
+	var content = (0, _query2.default)("#content")[0];
+	for (var i = 0; i < msg.length; i++) {
+		content.innerHTML += '<div class="friend-group">' + '<div class="friend-group-in">' + '<div id="circle-wrap" class="circle-wrap pull-left">' + ("<div style=\"background-image: url(" + msg[i].src + ") ;\" class=\"circle\"></div>") + '</div>' + '<div class="pull-left friend-msg">' + ("<p>" + msg[i].new2 + "</p>") + ("<p>" + msg[i].new1 + "</p>") + '</div>' + '<div class="pull-right send-msg">' + '<a class="btn">发消息</a>' + '</div>' + '</div>' + '</div>';
+	}
+	(0, _circle.circleHeight)((0, _query2.default)(".circle"), (0, _query2.default)("#circle-wrap")[0]);
+	(0, _lineheight2.default)((0, _query2.default)(".send-msg"), (0, _query2.default)(".send-msg")[0]);
+};
 
 /***/ }),
 /* 37 */,
@@ -772,10 +792,40 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, ".header {\n  height: 6.65635%; }\n\n.header-in {\n  height: 40.69767%;\n  position: relative;\n  top: 29.65116%; }\n\n.back {\n  height: 100%;\n  position: absolute;\n  margin-left: 10px; }\n\n.app-name {\n  text-align: center; }\n\n.footer {\n  height: 14.70588%;\n  background: #f68e54; }\n\n.add-wrap {\n  height: 49.21466%;\n  box-sizing: border-box;\n  border-bottom: 1px solid white; }\n\n.add-container, .menu-container {\n  height: 90%;\n  position: relative;\n  top: 5%;\n  text-align: center; }\n\n.menu-wrap {\n  height: 50.78534%; }\n\n.menu-container {\n  display: block;\n  width: 33.3333%;\n  text-align: center; }\n\n.nav-group {\n  width: 33.33%;\n  float: left;\n  height: 80%;\n  text-align: center;\n  position: relative;\n  top: 10%; }\n\n* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  max-width: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.center {\n  height: 78.63777%; }\n\n.nav-bar {\n  height: 5.01969%;\n  background: #f68e54; }\n\n.content {\n  height: 94.98031%;\n  background-color: #f5ba99;\n  overflow: auto; }\n\n.friend-group {\n  height: 16.66667%;\n  background-color: green; }\n\n.friend-group {\n  box-sizing: border-box;\n  border-top: 1px solid white; }\n\n.friend-group:first-child {\n  border: none; }\n\n.friend-group-in {\n  height: 50.81081%;\n  position: relative;\n  top: 24.59459%;\n  width: 90%;\n  margin: 0 auto; }\n\n.friend-msg {\n  margin-left: 20px;\n  height: 100%; }\n\n.send-msg {\n  height: 100%; }\n\n.btn {\n  background: #d2d2d2;\n  padding: 6px 8px;\n  border-radius: 4px; }\n", ""]);
+exports.push([module.i, ".header {\n  height: 6.65635%; }\n\n.header-in {\n  height: 40.69767%;\n  position: relative;\n  top: 29.65116%; }\n\n.back {\n  height: 100%;\n  position: absolute;\n  margin-left: 10px; }\n\n.app-name {\n  text-align: center; }\n\n.footer {\n  height: 14.70588%;\n  background: #f68e54; }\n\n.add-wrap {\n  height: 49.21466%;\n  box-sizing: border-box;\n  border-bottom: 1px solid white; }\n\n.add-container, .menu-container {\n  height: 90%;\n  position: relative;\n  top: 5%;\n  text-align: center; }\n\n.menu-wrap {\n  height: 50.78534%; }\n\n.menu-container {\n  display: block;\n  width: 33.3333%;\n  text-align: center; }\n\n.nav-group {\n  width: 33.33%;\n  float: left;\n  height: 80%;\n  text-align: center;\n  position: relative;\n  top: 10%; }\n\n* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  max-width: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red;\n  background-size: 100%; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.center {\n  height: 78.63777%; }\n\n.nav-bar {\n  height: 5.01969%;\n  background: #f68e54; }\n\n.content {\n  height: 94.98031%;\n  background-color: #f5ba99;\n  overflow: auto; }\n\n.friend-group {\n  height: 16.66667%;\n  box-sizing: border-box;\n  border-top: 1px solid white; }\n\n.friend-group:first-child {\n  border: none; }\n\n.friend-group-in {\n  height: 50.81081%;\n  position: relative;\n  top: 24.59459%;\n  width: 90%;\n  margin: 0 auto; }\n\n.friend-msg {\n  margin-left: 20px;\n  height: 100%; }\n\n.send-msg {\n  height: 100%; }\n\n.btn {\n  background: #d2d2d2;\n  padding: 6px 8px;\n  border-radius: 4px; }\n", ""]);
 
 // exports
 
+
+/***/ }),
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+exports.default = function (dom, target, value) {
+	for (var i = 0; i < dom.length; i++) {
+		dom[i].style[target] = value;
+	}
+};
 
 /***/ })
 /******/ ]);

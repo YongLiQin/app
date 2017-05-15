@@ -16,9 +16,6 @@
 }
 .friend-group{
 	@include height(1, 6);
-	background-color: green;
-}
-.friend-group{
 	@include border(top, 1px, white);
 }
 .friend-group:first-child{

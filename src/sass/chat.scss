@@ -29,6 +29,11 @@
 	color: white;
 }
 
+.circle-right, 
+.circle-left{
+	background-size: 100%;
+}
+
 .circle-right{
 	@include width(96, 686);
 	@include margin(left, 20, 686);

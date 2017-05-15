@@ -4,6 +4,7 @@ import $ from "./query";
 import fetch from "./fetch";
 import renderChat from './renderchat';
 import rendertext from './rendertext';
+
 const header = $("#header")[0];
 const chat = $("#chat")[0];
 const image = $('#image')[0];
@@ -21,6 +22,12 @@ localStorage.setItem('other', '石强华');
 rendertext($('#app-name')[0], `${localStorage.username},
 	${localStorage.other}`);
 
+let src = {
+	left: 'http://localhost:8080/images/goodfriend.jpg',
+	right: 'http://localhost:8080/images/star.jpg',
+};
+
+
 const socket = new WebSocket('ws://localhost:3000');
 
 socket.onopen = () => {
@@ -32,7 +39,7 @@ socket.onopen = () => {
 };
 
 socket.onmessage = (e) => {
-	renderChat('right', e.data);
+	renderChat('right', e.data, src);
 };
 
 send.onclick = () => {
@@ -43,13 +50,16 @@ send.onclick = () => {
 		data: msg.value
 	};
 
+
 	socket.send(JSON.stringify(data));
-	renderChat('left', msg.value);
+	renderChat('left', msg.value, src);
+	msg.value = '';
 };
 
 image.onchange = function () {
 	socket.send(this.files[0]);
-	renderChat('left', this.files[0]);
+	renderChat('left', this.files[0], src);
+
 	let data = {
 		login: false,
 		array: false,

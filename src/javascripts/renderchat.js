@@ -1,6 +1,7 @@
 import $ from './query';
+import renderStyle from './renderstyle';
 import {circleWidth, circleHeight} from "./circle";
-export default (direction, content) => {
+export default (direction, content, src) => {
 	let chat = $('#chat')[0];
 	let time = $('.time');
 	if (!time.length){
@@ -56,6 +57,12 @@ export default (direction, content) => {
 	wrap.appendChild(circle);
 	wrap.appendChild(msg);
 	chat.appendChild(wrap);
+
+	
 	circleWidth($(".circle"), $(".circle")[0]);
 	chat.scrollTop = chat.scrollHeight - chat.offsetHeight;
+	renderStyle($('.circle-left'), 'backgroundImage', 
+		`url(${src.left})`);
+	renderStyle($('.circle-right'), 'backgroundImage', 
+		`url(${src.right})`);
 };
