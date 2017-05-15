@@ -87,7 +87,7 @@ exports.default = function (query) {
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<div class=\"header-in\">\r\n\t<a id=\"back\" class=\"back\" href=\"javascript:;\">\r\n\t\t<img src=\"" + __webpack_require__(6) + "\">\r\n\t</a>\r\n\t<p class=\"app-name\">社交缘</p>\r\n</div>\r\n";
+module.exports = "<div class=\"header-in\">\r\n\t<a id=\"back\" class=\"back\" href=\"javascript:;\">\r\n\t\t<img src=\"" + __webpack_require__(6) + "\">\r\n\t</a>\r\n\t<p id=\"app-name\" class=\"app-name\">社交缘</p>\r\n</div>\r\n";
 
 /***/ }),
 /* 2 */

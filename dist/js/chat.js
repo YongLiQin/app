@@ -66,8 +66,9 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 34);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84,13 +85,120 @@ exports.default = function (query) {
 ;
 
 /***/ }),
-/* 1 */
+
+/***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<div class=\"header-in\">\r\n\t<a id=\"back\" class=\"back\" href=\"javascript:;\">\r\n\t\t<img src=\"" + __webpack_require__(6) + "\">\r\n\t</a>\r\n\t<p class=\"app-name\">社交缘</p>\r\n</div>\r\n";
+module.exports = "<div class=\"header-in\">\r\n\t<a id=\"back\" class=\"back\" href=\"javascript:;\">\r\n\t\t<img src=\"" + __webpack_require__(6) + "\">\r\n\t</a>\r\n\t<p id=\"app-name\" class=\"app-name\">社交缘</p>\r\n</div>\r\n";
 
 /***/ }),
-/* 2 */
+
+/***/ 17:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _query = __webpack_require__(0);
+
+var _query2 = _interopRequireDefault(_query);
+
+var _circle = __webpack_require__(8);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (direction, content) {
+	var chat = (0, _query2.default)('#chat')[0];
+	var time = (0, _query2.default)('.time');
+	if (!time.length) {
+		var div = document.createElement('div');
+		div.className = 'time';
+		var str = new Date().getHours() + ':\n\t\t' + new Date().getMinutes() + ':\n\t\t' + new Date().getSeconds();
+		div.innerHTML = str;
+		chat.appendChild(div);
+	} else {
+		var times = time[time.length - 1].innerHTML.split(':');
+		var pre = 0;
+		pre += times[0].trim() * 60 * 60 * 1000;
+		pre += times[1].trim() * 60 * 1000;
+		pre += times[2].trim() * 1000;
+		console.log(times[2].trim());
+		var hours = new Date().getHours();
+		var minutes = new Date().getMinutes();
+		var seconds = new Date().getSeconds();
+		var now = hours * 60 * 60 * 1000;
+		now += minutes * 60 * 1000;
+		now += seconds * 1000;
+		if (now - pre >= 1000 * 60) {
+			var _div = document.createElement('div');
+			_div.className = 'time';
+			var _str = new Date().getHours() + ':\n\t\t\t' + new Date().getMinutes() + ':\n\t\t\t' + new Date().getSeconds();
+			_div.innerHTML = _str;
+			chat.appendChild(_div);
+		}
+	};
+
+	var wrap = document.createElement("div");
+	wrap.className = 'clearfix chat-group';
+	var circle = document.createElement("div");
+	var msg = document.createElement("div");
+	circle.className = 'pull-' + direction + ' circle circle-' + direction;
+	msg.className = 'pull-' + direction + ' chat-control';
+
+	if ((typeof content === 'undefined' ? 'undefined' : _typeof(content)) != "object") {
+		msg.innerHTML = content;
+	} else {
+		var reader = new FileReader();
+		reader.readAsDataURL(content);
+		reader.onload = function () {
+			var img = document.createElement('img');
+			img.src = this.result;
+			msg.appendChild(img);
+		};
+	}
+	wrap.appendChild(circle);
+	wrap.appendChild(msg);
+	chat.appendChild(wrap);
+	(0, _circle.circleWidth)((0, _query2.default)(".circle"), (0, _query2.default)(".circle")[0]);
+	chat.scrollTop = chat.scrollHeight - chat.offsetHeight;
+};
+
+/***/ }),
+
+/***/ 18:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(20);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(3)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/_css-loader@0.28.1@css-loader/index.js!../../node_modules/_postcss-loader@1.3.3@postcss-loader/index.js!../../node_modules/_sass-loader@6.0.4@sass-loader/lib/loader.js!./chat.scss", function() {
+			var newContent = require("!!../../node_modules/_css-loader@0.28.1@css-loader/index.js!../../node_modules/_postcss-loader@1.3.3@postcss-loader/index.js!../../node_modules/_sass-loader@6.0.4@sass-loader/lib/loader.js!./chat.scss");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 2:
 /***/ (function(module, exports) {
 
 /*
@@ -172,7 +280,23 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 3 */
+
+/***/ 20:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".header {\n  height: 6.65635%; }\n\n.header-in {\n  height: 40.69767%;\n  position: relative;\n  top: 29.65116%; }\n\n.back {\n  height: 100%;\n  position: absolute;\n  margin-left: 10px; }\n\n.app-name {\n  text-align: center; }\n\n* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  max-width: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.center {\n  height: 84.82972%;\n  position: relative;\n  background-color: #f5ba99; }\n\n.footer {\n  height: 8.51393%;\n  background-color: #131518; }\n\n.chat-content {\n  margin-left: 4.26667%;\n  margin-right: 4.26667%;\n  box-sizing: border-box;\n  height: 100%;\n  overflow-y: auto; }\n\n.chat-group, .time {\n  margin-top: 20px; }\n\n.time {\n  text-align: center;\n  color: white; }\n\n.circle-right {\n  width: 13.99417%;\n  margin-left: 2.91545%;\n  height: 20px; }\n\n.circle-left {\n  height: 20px;\n  width: 13.99417%;\n  margin-right: 2.91545%; }\n\n.chat-control {\n  max-width: 69.09621%;\n  word-break: break-all;\n  padding: 10px 5px;\n  box-sizing: border-box;\n  background: white;\n  border-radius: 10px; }\n\n.footer-in {\n  width: 91.46667%;\n  height: 68.18182%;\n  position: relative;\n  top: 15.90909%;\n  margin: 0 auto; }\n\n.methods, .send, .msg {\n  height: 100%;\n  float: left; }\n\n.methods, .send {\n  width: 10.20408%; }\n\n.msg {\n  width: 79.59184%;\n  text-align: center; }\n  .msg > input {\n    height: 100%;\n    width: 86.99634%;\n    border: none;\n    background-color: #131518;\n    text-indent: 1em;\n    color: white; }\n\n.send-photo, .methods > input {\n  position: absolute;\n  margin-top: -18%; }\n\n.methods > input {\n  width: 60px;\n  height: 35px;\n  opacity: 0; }\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -468,7 +592,93 @@ function updateLink(linkElement, options, obj) {
 
 
 /***/ }),
-/* 4 */
+
+/***/ 34:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(18);
+
+var _header = __webpack_require__(1);
+
+var _header2 = _interopRequireDefault(_header);
+
+var _query = __webpack_require__(0);
+
+var _query2 = _interopRequireDefault(_query);
+
+var _fetch = __webpack_require__(58);
+
+var _fetch2 = _interopRequireDefault(_fetch);
+
+var _renderchat = __webpack_require__(17);
+
+var _renderchat2 = _interopRequireDefault(_renderchat);
+
+var _rendertext = __webpack_require__(59);
+
+var _rendertext2 = _interopRequireDefault(_rendertext);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var header = (0, _query2.default)("#header")[0];
+var chat = (0, _query2.default)("#chat")[0];
+var image = (0, _query2.default)('#image')[0];
+var send = (0, _query2.default)('#send')[0];
+var msg = (0, _query2.default)('#msg')[0];
+
+header.innerHTML = _header2.default;
+
+chat.scrollTop = chat.scrollHeight - chat.offsetHeight;
+
+localStorage.setItem('username', '覃永利');
+
+localStorage.setItem('other', '石强华');
+
+(0, _rendertext2.default)((0, _query2.default)('#app-name')[0], localStorage.username + ",\n\t" + localStorage.other);
+
+var socket = new WebSocket('ws://localhost:3000');
+
+socket.onopen = function () {
+	var data = {
+		login: true,
+		username: localStorage.username
+	};
+	socket.send(JSON.stringify(data));
+};
+
+socket.onmessage = function (e) {
+	(0, _renderchat2.default)('right', e.data);
+};
+
+send.onclick = function () {
+	var data = {
+		login: false,
+		array: false,
+		other: "覃永前,覃雪琴,石强华",
+		data: msg.value
+	};
+
+	socket.send(JSON.stringify(data));
+	(0, _renderchat2.default)('left', msg.value);
+};
+
+image.onchange = function () {
+	socket.send(this.files[0]);
+	(0, _renderchat2.default)('left', this.files[0]);
+	var data = {
+		login: false,
+		array: false,
+		other: "覃永前"
+	};
+	socket.send(JSON.stringify(data));
+};
+
+/***/ }),
+
+/***/ 4:
 /***/ (function(module, exports) {
 
 
@@ -563,15 +773,52 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 5 */,
-/* 6 */
+
+/***/ 58:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+exports.default = function (method, url, data, callback) {
+	return new Promise(function (resolve, reject) {
+		var xhr = new XMLHttpRequest();
+		xhr.open(method, url, true);
+		xhr.send(data);
+		xhr.onload = callback;
+	});
+};
+
+/***/ }),
+
+/***/ 59:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+exports.default = function (dom, text) {
+	dom.innerHTML = text;
+};
+
+/***/ }),
+
+/***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/arrow-22d44.png";
 
 /***/ }),
-/* 7 */,
-/* 8 */
+
+/***/ 8:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -597,218 +844,6 @@ var circleHeight = function circleHeight(dom1, dom2) {
 exports.circleWidth = circleWidth;
 exports.circleHeight = circleHeight;
 
-/***/ }),
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-var _query = __webpack_require__(0);
-
-var _query2 = _interopRequireDefault(_query);
-
-var _circle = __webpack_require__(8);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function (direction, content) {
-	var chat = (0, _query2.default)('#chat')[0];
-	var time = (0, _query2.default)('.time');
-	if (!time.length) {
-		var div = document.createElement('div');
-		div.className = 'time';
-		var str = new Date().getHours() + ':\n\t\t' + new Date().getMinutes() + ':\n\t\t' + new Date().getSeconds();
-		div.innerHTML = str;
-		chat.appendChild(div);
-	} else {
-		var times = time[time.length - 1].innerHTML.split(':');
-		var pre = 0;
-		pre += times[0].trim() * 60 * 60 * 1000;
-		pre += times[1].trim() * 60 * 1000;
-		pre += times[2].trim() * 1000;
-		console.log(times[2].trim());
-		var hours = new Date().getHours();
-		var minutes = new Date().getMinutes();
-		var seconds = new Date().getSeconds();
-		var now = hours * 60 * 60 * 1000;
-		now += minutes * 60 * 1000;
-		now += seconds * 1000;
-		if (now - pre >= 1000 * 60) {
-			var _div = document.createElement('div');
-			_div.className = 'time';
-			var _str = new Date().getHours() + ':\n\t\t\t' + new Date().getMinutes() + ':\n\t\t\t' + new Date().getSeconds();
-			_div.innerHTML = _str;
-			chat.appendChild(_div);
-		}
-	};
-
-	var wrap = document.createElement("div");
-	wrap.className = 'clearfix chat-group';
-	var circle = document.createElement("div");
-	var msg = document.createElement("div");
-	circle.className = 'pull-' + direction + ' circle circle-' + direction;
-	msg.className = 'pull-' + direction + ' chat-control';
-
-	if ((typeof content === 'undefined' ? 'undefined' : _typeof(content)) != "object") {
-		msg.innerHTML = content;
-	} else {
-		var reader = new FileReader();
-		reader.readAsDataURL(content);
-		reader.onload = function () {
-			var img = document.createElement('img');
-			img.src = this.result;
-			msg.appendChild(img);
-		};
-	}
-	wrap.appendChild(circle);
-	wrap.appendChild(msg);
-	chat.appendChild(wrap);
-	(0, _circle.circleWidth)((0, _query2.default)(".circle"), (0, _query2.default)(".circle")[0]);
-	chat.scrollTop = chat.scrollHeight - chat.offsetHeight;
-};
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(20);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(3)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/_css-loader@0.28.1@css-loader/index.js!../../node_modules/_postcss-loader@1.3.3@postcss-loader/index.js!../../node_modules/_sass-loader@6.0.4@sass-loader/lib/loader.js!./chat.scss", function() {
-			var newContent = require("!!../../node_modules/_css-loader@0.28.1@css-loader/index.js!../../node_modules/_postcss-loader@1.3.3@postcss-loader/index.js!../../node_modules/_sass-loader@6.0.4@sass-loader/lib/loader.js!./chat.scss");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 19 */,
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(2)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, ".header {\n  height: 6.65635%; }\n\n.header-in {\n  height: 40.69767%;\n  position: relative;\n  top: 29.65116%; }\n\n.back {\n  height: 100%;\n  position: absolute;\n  margin-left: 10px; }\n\n.app-name {\n  text-align: center; }\n\n* {\n  padding: 0px;\n  margin: 0px; }\n\nhtml {\n  height: 100%; }\n\nbody {\n  height: 100%;\n  min-height: 568px;\n  overflow: hidden;\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif; }\n\na {\n  color: #00B7FF;\n  text-decoration: none; }\n\nul, li {\n  list-style: none; }\n\nimg {\n  max-height: 100%;\n  max-width: 100%;\n  vertical-align: middle; }\n\nul {\n  height: 100%; }\n\n.container {\n  height: 100%; }\n\n.pull-left {\n  float: left; }\n\n.pull-right {\n  float: right; }\n\n.circle {\n  border-radius: 50%;\n  background-color: red; }\n\n.circle-wrap {\n  height: 100%; }\n\n.clearfix:after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both; }\n\n.center {\n  height: 84.82972%;\n  position: relative;\n  background-color: #f5ba99; }\n\n.footer {\n  height: 8.51393%;\n  background-color: #131518; }\n\n.chat-content {\n  margin-left: 4.26667%;\n  margin-right: 4.26667%;\n  box-sizing: border-box;\n  height: 100%;\n  overflow-y: auto; }\n\n.chat-group, .time {\n  margin-top: 20px; }\n\n.time {\n  text-align: center;\n  color: white; }\n\n.circle-right {\n  width: 13.99417%;\n  margin-left: 2.91545%;\n  height: 20px; }\n\n.circle-left {\n  height: 20px;\n  width: 13.99417%;\n  margin-right: 2.91545%; }\n\n.chat-control {\n  max-width: 69.09621%;\n  word-break: break-all;\n  padding: 10px 5px;\n  box-sizing: border-box;\n  background: white;\n  border-radius: 10px; }\n\n.footer-in {\n  width: 91.46667%;\n  height: 68.18182%;\n  position: relative;\n  top: 15.90909%;\n  margin: 0 auto; }\n\n.methods, .send, .msg {\n  height: 100%;\n  float: left; }\n\n.methods, .send {\n  width: 10.20408%; }\n\n.msg {\n  width: 79.59184%;\n  text-align: center; }\n  .msg > input {\n    height: 100%;\n    width: 86.99634%;\n    border: none;\n    background-color: #131518;\n    text-indent: 1em;\n    color: white; }\n\n.send-photo, .methods > input {\n  position: absolute;\n  margin-top: -18%; }\n\n.methods > input {\n  width: 60px;\n  height: 35px;\n  opacity: 0; }\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(18);
-
-var _header = __webpack_require__(1);
-
-var _header2 = _interopRequireDefault(_header);
-
-var _query = __webpack_require__(0);
-
-var _query2 = _interopRequireDefault(_query);
-
-var _renderchat = __webpack_require__(17);
-
-var _renderchat2 = _interopRequireDefault(_renderchat);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var header = (0, _query2.default)("#header")[0];
-// import {circleWidth, circleHeight} from "./circle";
-
-var chat = (0, _query2.default)("#chat")[0];
-var image = (0, _query2.default)('#image')[0];
-var send = (0, _query2.default)('#send')[0];
-var msg = (0, _query2.default)('#msg')[0];
-
-header.innerHTML = _header2.default;
-// circleWidth($(".circle"), $(".circle")[0]);
-chat.scrollTop = chat.scrollHeight - chat.offsetHeight;
-
-localStorage.setItem('username', '覃永利');
-
-var socket = new WebSocket('ws://localhost:3000');
-
-socket.onopen = function () {
-	var data = {
-		login: true,
-		username: localStorage.username
-	};
-	socket.send(JSON.stringify(data));
-};
-
-socket.onmessage = function (e) {
-	(0, _renderchat2.default)('right', e.data);
-};
-
-send.onclick = function () {
-	var data = {
-		login: false,
-		array: false,
-		other: "覃永前,覃雪琴,石强华",
-		data: msg.value
-	};
-
-	socket.send(JSON.stringify(data));
-	(0, _renderchat2.default)('left', msg.value);
-};
-
-image.onchange = function () {
-	socket.send(this.files[0]);
-	(0, _renderchat2.default)('left', this.files[0]);
-	var data = {
-		login: false,
-		array: false,
-		other: "覃永前"
-	};
-	socket.send(JSON.stringify(data));
-};
-
 /***/ })
-/******/ ]);
+
+/******/ });
